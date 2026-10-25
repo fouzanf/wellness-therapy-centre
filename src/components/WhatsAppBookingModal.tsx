@@ -118,6 +118,18 @@ export default function WhatsAppBookingModal() {
     }
   }, []);
 
+  // Lock background body scroll when booking modal is open
+  useEffect(() => {
+    if (isBookingOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isBookingOpen]);
+
   // Reset steps on close
   const handleClose = () => {
     setCurrentStep(1);
@@ -233,7 +245,11 @@ Please confirm my appointment slot. Thanks!`;
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+      <div 
+        className="fixed inset-0 z-[60] flex items-center justify-center p-3 sm:p-6 overflow-y-auto overscroll-none"
+        onWheel={(e) => e.preventDefault()}
+        onTouchMove={(e) => e.preventDefault()}
+      >
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -249,7 +265,9 @@ Please confirm my appointment slot. Thanks!`;
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
-          className="relative w-[95%] sm:w-full max-w-lg lg:max-w-2xl max-h-[92vh] flex flex-col bg-white dark:bg-[#0f0f14] border border-neutral-200 dark:border-emerald-500/20 rounded-2xl sm:rounded-3xl shadow-2xl shadow-neutral-900/10 dark:shadow-emerald-950/40 overflow-hidden z-10 my-auto transition-colors duration-300"
+          className="relative w-[95%] sm:w-full max-w-lg lg:max-w-2xl max-h-[92vh] flex flex-col bg-white dark:bg-[#0f0f14] border border-neutral-200 dark:border-emerald-500/20 rounded-2xl sm:rounded-3xl shadow-2xl shadow-neutral-900/10 dark:shadow-emerald-950/40 overflow-hidden overscroll-contain z-10 my-auto transition-colors duration-300"
+          onWheel={(e) => e.stopPropagation()}
+          onTouchMove={(e) => e.stopPropagation()}
         >
           {/* Header Bar */}
           <div className="relative px-4 sm:px-6 py-4 sm:py-5 border-b border-neutral-200 dark:border-white/[0.08] bg-gradient-to-r from-emerald-50 via-neutral-100 to-white dark:from-emerald-950/40 dark:via-[#13131b] dark:to-black">
@@ -346,7 +364,17 @@ Please confirm my appointment slot. Thanks!`;
           </div>
 
           {/* Modal Body */}
-          <div className="p-4 sm:p-6 max-h-[62vh] sm:max-h-[68vh] overflow-y-auto flex-1">
+          <div 
+            className="flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6 pb-32 sm:pb-8 max-h-[62vh] sm:max-h-[68vh] space-y-4"
+            onWheel={(e) => {
+              // Stop wheel events from bleeding to background
+              e.stopPropagation();
+            }}
+            onTouchMove={(e) => {
+              // Stop touch drag events from bleeding to background
+              e.stopPropagation();
+            }}
+          >
             {/* STEP 1: SERVICE SELECTION */}
             {currentStep === 1 && (
               <motion.div
@@ -630,7 +658,7 @@ Please confirm my appointment slot. Thanks!`;
           </div>
 
           {/* Footer Controls */}
-          <div className="px-4 sm:px-6 py-3.5 sm:py-4 bg-neutral-50 dark:bg-[#0a0a0e] border-t border-neutral-200 dark:border-white/[0.08] flex items-center justify-between">
+          <div className="px-4 sm:px-6 py-3.5 sm:py-4 bg-neutral-50/98 dark:bg-[#0a0a0e]/98 backdrop-blur-md border-t border-neutral-200 dark:border-white/[0.08] flex items-center justify-between shrink-0 z-10">
             {currentStep > 1 ? (
               <button
                 type="button"

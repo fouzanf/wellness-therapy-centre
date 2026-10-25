@@ -4,11 +4,22 @@ import React from "react";
 import { MessageSquare, Phone, MapPin, Clock } from "lucide-react";
 import { useBooking } from "@/context/BookingContext";
 
-export default function MobileStickyBar() {
-  const { openBooking } = useBooking();
+interface MobileStickyBarProps {
+  onOpenBooking?: () => void;
+  isBookingOpen?: boolean;
+}
+
+export function MobileStickyBar({ onOpenBooking, isBookingOpen: propIsBookingOpen }: MobileStickyBarProps = {}) {
+  const { isBookingOpen: contextIsBookingOpen, openBooking } = useBooking();
+
+  // Hide sticky bar automatically when booking modal is open
+  const isModalActive = propIsBookingOpen ?? contextIsBookingOpen;
+  if (isModalActive) return null;
+
+  const handleBooking = onOpenBooking ?? (() => openBooking());
 
   return (
-    <div className="fixed bottom-0 inset-x-0 z-50 lg:hidden bg-white/95 dark:bg-[#0c0c12]/95 backdrop-blur-xl border-t border-neutral-200 dark:border-emerald-500/25 px-3 py-2.5 shadow-2xl shadow-neutral-500/20 dark:shadow-black transition-colors duration-300">
+    <div className="fixed bottom-0 inset-x-0 z-40 lg:hidden bg-white/95 dark:bg-[#0c0c12]/95 backdrop-blur-xl border-t border-neutral-200 dark:border-emerald-500/25 px-3 py-2.5 shadow-2xl shadow-neutral-500/20 dark:shadow-black transition-colors duration-300">
       {/* Mini status indicator */}
       <div className="flex items-center justify-between text-[10px] text-neutral-500 dark:text-gray-400 mb-1.5 px-1">
         <div className="flex items-center gap-1.5">
@@ -34,7 +45,7 @@ export default function MobileStickyBar() {
         {/* Book via WhatsApp Button */}
         <button
           type="button"
-          onClick={() => openBooking()}
+          onClick={handleBooking}
           className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-xs font-bold bg-gradient-to-r from-emerald-600 to-teal-500 dark:from-emerald-500 dark:to-teal-400 text-white dark:text-black shadow-lg shadow-emerald-500/30 active:scale-95 transition"
         >
           <MessageSquare className="w-3.5 h-3.5 fill-current" />
@@ -44,3 +55,5 @@ export default function MobileStickyBar() {
     </div>
   );
 }
+
+export default MobileStickyBar;
