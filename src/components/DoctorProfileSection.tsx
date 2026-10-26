@@ -21,9 +21,10 @@ export default function DoctorProfileSection() {
   const { openBooking } = useBooking();
 
   return (
-    <section id="about" className="py-24 bg-neutral-50/60 dark:bg-[#0a0a0d] relative overflow-hidden transition-colors duration-300">
+    <section id="about" className="py-24 bg-[#f5f1e8]/60 dark:bg-[#121110] relative overflow-hidden transition-colors duration-300">
       {/* Background radial accent */}
-      <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[550px] h-[550px] bg-emerald-500/5 blur-[140px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[600px] h-[600px] bg-[#1b3b2b]/6 dark:bg-[#34d399]/6 blur-[150px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-[#d4af37]/8 blur-[130px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -35,32 +36,32 @@ export default function DoctorProfileSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative rounded-3xl overflow-hidden border border-neutral-200 dark:border-emerald-500/30 shadow-xl dark:shadow-2xl dark:shadow-emerald-950/40 bg-white dark:bg-[#121218]">
+            <div className="relative rounded-3xl overflow-hidden border border-[#d4af37]/35 dark:border-[#d4af37]/25 shadow-2xl shadow-[#1b3b2b]/10 dark:shadow-black/75 bg-white dark:bg-[#181715]">
               {/* Photo of Dr. Begum at her clinic desk */}
               <div className="relative aspect-[4/5] w-full">
                 <Image
                   src="/images/doctor-photos.jpg"
-                  alt="Dr. M. Shasath Begum, M.D(Acu.) - Senior Holistic Physician at Wellness Therapy Centre"
+                  alt="Dr. M. Shasath Begum, M.D(Acu.) - Senior Holistic Physician at Wellness Therapy Centre Bangalore"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                   className="object-cover object-top hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 dark:from-[#0e0e14] via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 dark:from-[#121110] via-black/20 to-transparent" />
 
                 {/* Floating Experience Badge */}
-                <div className="absolute bottom-4 left-4 right-4 glass-panel p-4 rounded-2xl border border-white/[0.15] dark:border-white/[0.1] flex items-center justify-between">
+                <div className="absolute bottom-4 left-4 right-4 glass-panel p-4 rounded-2xl border border-[#d4af37]/30 flex items-center justify-between shadow-lg">
                   <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-xl bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400">
-                      <Award className="w-5 h-5" />
+                    <div className="p-2.5 rounded-xl bg-[#f5f1e8] dark:bg-white/[0.08] text-[#1b3b2b] dark:text-[#f3d987]">
+                      <Award className="w-5 h-5 text-[#d4af37]" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-neutral-900 dark:text-white">15+ Years Clinical Practice</div>
-                      <div className="text-[11px] text-neutral-600 dark:text-gray-400">J.P. Nagar, Bangalore</div>
+                      <div className="font-editorial text-xs font-semibold text-[#1c1b18] dark:text-white">15+ Years Clinical Practice</div>
+                      <div className="text-[11px] text-neutral-600 dark:text-neutral-400">J.P. Nagar, Bangalore</div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="text-xs font-extrabold text-emerald-600 dark:text-emerald-400">10,000+</div>
-                    <div className="text-[10px] text-neutral-600 dark:text-gray-400">Patients Healed</div>
+                    <div className="font-editorial text-sm font-bold text-[#1b3b2b] dark:text-[#34d399]">10,000+</div>
+                    <div className="text-[10px] text-neutral-600 dark:text-neutral-400">Patients Healed</div>
                   </div>
                 </div>
               </div>
@@ -75,22 +76,22 @@ export default function DoctorProfileSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 space-y-6"
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/70 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-bold">
-              <GraduationCap className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              <span>Senior Holistic Physician</span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f4efe4] dark:bg-[#1c1a17] border border-[#d4af37]/35 dark:border-[#d4af37]/25 text-[#1b3b2b] dark:text-[#f3d987] text-xs font-semibold shadow-sm">
+              <GraduationCap className="w-4 h-4 text-[#d4af37]" />
+              <span>Senior Holistic Physician & Medical Director</span>
             </div>
 
             <div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-tight">
+              <h2 className="font-editorial text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#1c1b18] dark:text-[#fbf9f5] tracking-tight leading-tight">
                 Dr. M. Shasath Begum,{" "}
-                <span className="text-emerald-600 dark:emerald-glow-text">M.D(Acu.)</span>
+                <span className="font-editorial-italic sage-glow-text">M.D(Acu.)</span>
               </h2>
-              <p className="text-sm font-semibold text-amber-700 dark:text-amber-400 mt-1">
+              <p className="text-sm font-semibold text-[#855f10] dark:text-[#f3d987] mt-1 tracking-wide">
                 Founder & Chief Holistic Consultant • Wellness Therapy Centre Bangalore
               </p>
             </div>
 
-            <p className="text-sm sm:text-base text-neutral-600 dark:text-gray-300 leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed font-normal">
               With over 15 years of dedicated clinical practice, Dr. M. Shasath Begum is one
               of Bangalore’s foremost authorities in clinical acupuncture, precision acupressure,
               and authentic Hijama (@ Sunnah Point). Her healing philosophy integrates classical
@@ -120,13 +121,13 @@ export default function DoctorProfileSection() {
               ].map((c, i) => (
                 <div
                   key={i}
-                  className="p-3.5 rounded-2xl bg-white dark:bg-[#13131c] border border-neutral-200 dark:border-white/[0.06] space-y-1 shadow-sm dark:shadow-none"
+                  className="p-4 rounded-2xl bg-white dark:bg-[#181715] border border-[#1b3b2b]/10 dark:border-[#d4af37]/20 space-y-1 shadow-sm"
                 >
-                  <div className="flex items-center gap-2 text-xs font-bold text-neutral-900 dark:text-white">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                  <div className="flex items-center gap-2 text-xs font-bold text-[#1c1b18] dark:text-white">
+                    <CheckCircle2 className="w-4 h-4 text-[#1b3b2b] dark:text-[#34d399] shrink-0" />
                     <span>{c.title}</span>
                   </div>
-                  <p className="text-[11px] text-neutral-600 dark:text-gray-400 leading-relaxed pl-6">
+                  <p className="text-[11px] text-neutral-600 dark:text-neutral-400 leading-relaxed pl-6">
                     {c.desc}
                   </p>
                 </div>
@@ -134,7 +135,7 @@ export default function DoctorProfileSection() {
             </div>
 
             {/* Doctor quote */}
-            <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/20 border-l-4 border-emerald-600 dark:border-emerald-400 text-xs sm:text-sm text-neutral-700 dark:text-gray-300 italic leading-relaxed">
+            <div className="p-5 rounded-2xl bg-white/90 dark:bg-[#181715] border-l-4 border-[#d4af37] text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 italic leading-relaxed shadow-sm">
               &ldquo;The human body holds an extraordinary capacity to self-repair once meridian
               blockages are cleared and circulation is restored. True healing begins when we
               listen to the body rather than silencing its distress signals with temporary pills.&rdquo;
@@ -145,18 +146,18 @@ export default function DoctorProfileSection() {
               <button
                 type="button"
                 onClick={() => openBooking("General Wellness Consultation")}
-                className="w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white dark:text-black shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-2 transition active:scale-95"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-semibold text-xs bg-[#1b3b2b] hover:bg-[#142e21] dark:bg-[#1f3f2f] text-[#fbf9f5] border border-[#d4af37]/45 shadow-lg shadow-[#1b3b2b]/15 flex items-center justify-center gap-2 transition active:scale-95"
               >
-                <MessageSquare className="w-4 h-4 fill-current" />
-                <span>Book 1-on-1 Consultation</span>
+                <MessageSquare className="w-4 h-4 fill-current text-[#d4af37]" />
+                <span>Book Concierge Consultation</span>
               </button>
 
               <a
                 href="tel:+919740495548"
-                className="w-full sm:w-auto px-5 py-3 rounded-xl font-semibold text-xs bg-neutral-100 hover:bg-neutral-200 text-neutral-900 dark:bg-white/[0.06] dark:hover:bg-white/[0.1] dark:text-white border border-neutral-300 dark:border-white/[0.1] flex items-center justify-center gap-2 transition"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl font-medium text-xs bg-white/90 hover:bg-[#f5f1e8] text-[#1c1b18] dark:bg-[#1a1917] dark:hover:bg-[#22201d] dark:text-[#fbf9f5] border border-[#d4af37]/35 flex items-center justify-center gap-2 transition shadow-sm"
               >
-                <Phone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                <span>Call Clinic Desk (+91 9740495548)</span>
+                <Phone className="w-4 h-4 text-[#1b3b2b] dark:text-[#34d399]" />
+                <span>Call Sanctuary Desk (+91 9740495548)</span>
               </a>
             </div>
           </motion.div>
@@ -168,12 +169,12 @@ export default function DoctorProfileSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#121218] border border-neutral-200 dark:border-emerald-500/20 shadow-xl dark:shadow-2xl relative overflow-hidden"
+          className="mt-16 p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#181715] border border-[#d4af37]/25 shadow-xl relative overflow-hidden"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Certificates Photo Frame */}
             <div className="lg:col-span-5 relative">
-              <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-neutral-200 dark:border-emerald-500/30 shadow-md group">
+              <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-[#d4af37]/30 shadow-md group">
                 <Image
                   src="/images/doctor-certificates.jpg"
                   alt="Official Degrees and Certifications Board of Dr. M. Shasath Begum, M.D(Acu.)"
@@ -182,9 +183,9 @@ export default function DoctorProfileSection() {
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3 glass-panel p-2.5 rounded-xl border border-white/[0.1] text-center">
-                  <span className="text-[11px] font-bold text-emerald-300 flex items-center justify-center gap-1.5">
-                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                <div className="absolute bottom-3 left-3 right-3 glass-panel p-2.5 rounded-xl border border-[#d4af37]/35 text-center">
+                  <span className="text-[11px] font-bold text-[#1b3b2b] dark:text-[#f3d987] flex items-center justify-center gap-1.5">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#d4af37]" />
                     Authentic Framed Clinic Certificates Board
                   </span>
                 </div>
@@ -193,35 +194,35 @@ export default function DoctorProfileSection() {
 
             {/* Right Information & Accreditation Breakdown */}
             <div className="lg:col-span-7 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-semibold border border-emerald-200 dark:border-emerald-500/20">
-                <Award className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#f4efe4] dark:bg-[#1f1d1a] text-[#1b3b2b] dark:text-[#f3d987] text-xs font-semibold border border-[#d4af37]/30">
+                <Award className="w-3.5 h-3.5 text-[#d4af37]" />
                 <span>Verified Qualifications & Licensures</span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white tracking-tight">
-                Official Clinical Accreditations of <span className="text-emerald-600 dark:emerald-glow-text">Dr. M. Shasath Begum</span>
+              <h3 className="font-editorial text-xl sm:text-2xl font-semibold text-[#1c1b18] dark:text-white tracking-tight">
+                Official Clinical Accreditations of <span className="font-editorial-italic sage-glow-text">Dr. M. Shasath Begum</span>
               </h3>
 
-              <p className="text-xs sm:text-sm text-neutral-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">
                 Displaying Dr. Begum&apos;s verified postgraduate degrees and clinical certifications, officially recognized in complementary and alternative medicine:
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
-                <div className="p-3 rounded-xl bg-neutral-50 dark:bg-black/40 border border-neutral-200 dark:border-white/[0.06]">
-                  <div className="text-xs font-bold text-emerald-700 dark:text-emerald-300">M.D. in Clinical Acupuncture</div>
-                  <div className="text-[11px] text-neutral-600 dark:text-gray-400 mt-0.5">Medicina Alternativa & Open International University</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                <div className="p-3.5 rounded-2xl bg-[#fbf9f5] dark:bg-[#141311] border border-[#d4af37]/20">
+                  <div className="text-xs font-bold text-[#1b3b2b] dark:text-[#34d399]">M.D. in Clinical Acupuncture</div>
+                  <div className="text-[11px] text-neutral-600 dark:text-neutral-400 mt-0.5">Medicina Alternativa & Open International University</div>
                 </div>
-                <div className="p-3 rounded-xl bg-neutral-50 dark:bg-black/40 border border-neutral-200 dark:border-white/[0.06]">
-                  <div className="text-xs font-bold text-amber-700 dark:text-amber-300">Certified Sujok Acupressure Master</div>
-                  <div className="text-[11px] text-neutral-600 dark:text-gray-400 mt-0.5">International Sujok Association Standards</div>
+                <div className="p-3.5 rounded-2xl bg-[#fbf9f5] dark:bg-[#141311] border border-[#d4af37]/20">
+                  <div className="text-xs font-bold text-[#855f10] dark:text-[#f3d987]">Certified Sujok Acupressure Master</div>
+                  <div className="text-[11px] text-neutral-600 dark:text-neutral-400 mt-0.5">International Sujok Association Standards</div>
                 </div>
-                <div className="p-3 rounded-xl bg-neutral-50 dark:bg-black/40 border border-neutral-200 dark:border-white/[0.06]">
-                  <div className="text-xs font-bold text-teal-700 dark:text-teal-300">Panchakarma Certified Technician</div>
-                  <div className="text-[11px] text-neutral-600 dark:text-gray-400 mt-0.5">Classical Detoxification & Rejuvenation Therapy</div>
+                <div className="p-3.5 rounded-2xl bg-[#fbf9f5] dark:bg-[#141311] border border-[#d4af37]/20">
+                  <div className="text-xs font-bold text-[#2d5a42] dark:text-[#6ee7b7]">Panchakarma Certified Practitioner</div>
+                  <div className="text-[11px] text-neutral-600 dark:text-neutral-400 mt-0.5">Classical Detoxification & Rejuvenation Therapy</div>
                 </div>
-                <div className="p-3 rounded-xl bg-neutral-50 dark:bg-black/40 border border-neutral-200 dark:border-white/[0.06]">
-                  <div className="text-xs font-bold text-rose-700 dark:text-rose-300">Certified Hijama Cupping Practitioner</div>
-                  <div className="text-[11px] text-neutral-600 dark:text-gray-400 mt-0.5">Authentic Sunnah Point & Surgical Sterility Protocols</div>
+                <div className="p-3.5 rounded-2xl bg-[#fbf9f5] dark:bg-[#141311] border border-[#d4af37]/20">
+                  <div className="text-xs font-bold text-[#855f10] dark:text-[#f3d987]">Certified Hijama Cupping Specialist</div>
+                  <div className="text-[11px] text-neutral-600 dark:text-neutral-400 mt-0.5">Authentic Sunnah Point & Surgical Sterility Protocols</div>
                 </div>
               </div>
             </div>

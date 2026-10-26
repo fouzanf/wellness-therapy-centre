@@ -208,25 +208,25 @@ export default function MeridianDiagnosticMatrix() {
     CONDITIONS_MATRIX.find((c) => c.id === activeId) || CONDITIONS_MATRIX[0];
 
   return (
-    <section className="py-24 bg-[#f8fafc] dark:bg-[#0a0a0e] relative overflow-hidden transition-colors">
+    <section className="py-24 bg-[#fbf9f5] dark:bg-[#121110] relative overflow-hidden transition-colors">
       {/* Background radial glow */}
-      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-emerald-500/5 blur-[150px] pointer-events-none rounded-full" />
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-amber-500/5 blur-[140px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#1b3b2b]/6 dark:bg-[#34d399]/6 blur-[150px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#d4af37]/8 blur-[140px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950/70 border border-emerald-300 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-400 text-xs font-bold mb-3 shadow-sm">
-            <Compass className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f4efe4] dark:bg-[#1c1a17] border border-[#d4af37]/35 dark:border-[#d4af37]/25 text-[#1b3b2b] dark:text-[#f3d987] text-xs font-semibold mb-3 shadow-sm">
+            <Compass className="w-3.5 h-3.5 text-[#d4af37]" />
             <span>Interactive Meridian & Anatomy Matrix</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight">
+          <h2 className="font-editorial text-3xl sm:text-5xl font-semibold text-[#1c1b18] dark:text-[#fbf9f5] tracking-tight">
             Explore Your Body&apos;s{" "}
-            <span className="emerald-glow-text">Healing Meridian Pathways</span>
+            <span className="font-editorial-italic sage-glow-text">Healing Meridian Pathways</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-neutral-600 dark:text-gray-400 mt-4 leading-relaxed">
+          <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed">
             {language === "kn"
               ? "ನಿಮ್ಮ ಆರೋಗ್ಯ ಸಮಸ್ಯೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ ಮತ್ತು ಡಾ. ಶಾಸತ್ ಬೇಗಂ ಅವರ ನಿಖರವಾದ ಆಕ್ಯುಪಾಯಿಂಟ್ ಚಿಕಿತ್ಸಾ ವಿಧಾನವನ್ನು ವೀಕ್ಷಿಸಿ."
               : "Select your health condition below to visualize the exact TCM energy channels, acupoint coordinates, and clinical recovery protocol targeted by Dr. M. Shasath Begum."}
@@ -234,7 +234,7 @@ export default function MeridianDiagnosticMatrix() {
         </div>
 
         {/* Condition Selector Tabs */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-2.5 mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-3 mb-10">
           {CONDITIONS_MATRIX.map((item) => {
             const isActive = activeId === item.id;
             return (
@@ -242,15 +242,15 @@ export default function MeridianDiagnosticMatrix() {
                 key={item.id}
                 type="button"
                 onClick={() => setActiveId(item.id)}
-                className={`p-2.5 sm:p-3.5 rounded-2xl border text-left transition-all ${
+                className={`p-3 sm:p-4 rounded-2xl border text-left transition-all ${
                   isActive
-                    ? "bg-emerald-100 dark:bg-emerald-950/60 border-emerald-500 dark:border-emerald-400 shadow-md dark:shadow-xl dark:shadow-emerald-950/40 ring-1 ring-emerald-500/40 dark:ring-emerald-400/50"
-                    : "bg-white dark:bg-[#121218] border-neutral-200 dark:border-white/[0.06] hover:bg-neutral-50 dark:hover:bg-[#181822] hover:border-emerald-400/40 text-neutral-600 dark:text-gray-400 shadow-sm"
+                    ? "bg-[#f4efe4] dark:bg-[#201d19] border-[#d4af37] shadow-md ring-1 ring-[#d4af37]/60"
+                    : "bg-white dark:bg-[#181715] border-[#1b3b2b]/10 dark:border-white/[0.06] hover:bg-[#fcfbf9] dark:hover:bg-[#1f1d1a] hover:border-[#d4af37]/40 text-neutral-600 dark:text-neutral-400 shadow-sm"
                 }`}
               >
                 <div
-                  className={`text-xs font-bold leading-tight transition-colors ${
-                    isActive ? "text-emerald-800 dark:text-emerald-300" : "text-neutral-800 dark:text-gray-200"
+                  className={`text-xs font-semibold leading-tight transition-colors ${
+                    isActive ? "text-[#1b3b2b] dark:text-[#f3d987]" : "text-[#1c1b18] dark:text-neutral-200"
                   }`}
                 >
                   {language === "kn" ? item.nameKn : item.nameEn}
@@ -432,19 +432,19 @@ export default function MeridianDiagnosticMatrix() {
               </div>
 
               {/* Bottom Action CTA */}
-              <div className="pt-6 mt-6 border-t border-neutral-200 dark:border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="text-xs text-neutral-500 dark:text-gray-400 text-center sm:text-left">
-                  Treated personally by <strong className="text-neutral-900 dark:text-white">Dr. M. Shasath Begum</strong>
+              <div className="pt-6 mt-6 border-t border-[#d4af37]/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="text-xs text-neutral-500 dark:text-neutral-400 text-center sm:text-left">
+                  Treated personally by <strong className="text-[#1c1b18] dark:text-white">Dr. M. Shasath Begum, M.D(Acu.)</strong>
                 </div>
 
                 <button
                   type="button"
                   onClick={() => openBooking(current.recommendedService)}
-                  className="w-full sm:w-auto px-7 py-3 rounded-xl text-xs font-bold bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-400 hover:from-emerald-400 hover:to-teal-300 text-black shadow-xl shadow-emerald-500/30 flex items-center justify-center gap-2 transition active:scale-95"
+                  className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs font-semibold bg-[#1b3b2b] hover:bg-[#142e21] dark:bg-[#1f3f2f] text-[#fbf9f5] border border-[#d4af37]/45 shadow-xl shadow-[#1b3b2b]/15 flex items-center justify-center gap-2 transition active:scale-95"
                 >
-                  <Activity className="w-4 h-4" />
-                  <span>Book This Specialized Protocol</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <Activity className="w-4 h-4 text-[#d4af37]" />
+                  <span>Reserve This Specialized Protocol</span>
+                  <ArrowRight className="w-4 h-4 text-[#d4af37]" />
                 </button>
               </div>
             </div>

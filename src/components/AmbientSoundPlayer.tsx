@@ -104,36 +104,36 @@ export default function AmbientSoundPlayer() {
 
   return (
     <div className="fixed bottom-24 sm:bottom-6 left-4 sm:left-6 z-40">
-      <div className="glass-panel p-2 rounded-2xl border border-emerald-500/30 shadow-2xl flex items-center gap-2.5">
+      <div className="glass-panel p-2 rounded-2xl border border-[#d4af37]/30 shadow-2xl flex items-center gap-2.5">
         <button
           type="button"
           onClick={toggleSound}
           aria-label={isPlaying ? "Mute Healing Soundscape" : "Play 432Hz Healing Soundscape"}
-          className={`p-2.5 rounded-xl transition-all flex items-center gap-2 text-xs font-bold ${
+          className={`p-2.5 rounded-xl transition-all flex items-center gap-2 text-xs font-semibold ${
             isPlaying
-              ? "bg-emerald-600 text-white dark:bg-emerald-500 dark:text-black shadow-lg shadow-emerald-500/30"
-              : "bg-neutral-100 hover:bg-neutral-200 text-neutral-700 dark:bg-white/[0.06] dark:hover:bg-white/[0.1] dark:text-gray-300"
+              ? "bg-[#1b3b2b] text-[#fbf9f5] border border-[#d4af37]/50 shadow-md shadow-[#1b3b2b]/25"
+              : "bg-[#f5f1e8] hover:bg-[#ede7da] text-[#1c1b18] dark:bg-[#181715] dark:hover:bg-[#201e1b] dark:text-[#fbf9f5] border border-[#1b3b2b]/10 dark:border-white/[0.08]"
           }`}
         >
           {isPlaying ? (
             <>
-              <Volume2 className="w-4 h-4 animate-pulse" />
+              <Volume2 className="w-4 h-4 text-[#d4af37] animate-pulse" />
               <span className="hidden sm:inline">432Hz Sanctuary Calm</span>
             </>
           ) : (
             <>
-              <VolumeX className="w-4 h-4 text-neutral-500 dark:text-gray-400" />
-              <span className="hidden sm:inline">Play Healing Soundscape</span>
+              <VolumeX className="w-4 h-4 text-neutral-500 dark:text-neutral-400" />
+              <span className="hidden sm:inline">Play 432Hz Soundscape</span>
             </>
           )}
         </button>
 
         {isPlaying && (
           <div className="flex items-center gap-0.5 px-2">
-            <span className="w-1 h-3 bg-emerald-400 rounded-full animate-[pulse_1s_infinite_100ms]" />
-            <span className="w-1 h-5 bg-teal-300 rounded-full animate-[pulse_1s_infinite_250ms]" />
-            <span className="w-1 h-2 bg-emerald-400 rounded-full animate-[pulse_1s_infinite_400ms]" />
-            <span className="w-1 h-4 bg-amber-300 rounded-full animate-[pulse_1s_infinite_150ms]" />
+            <span className="w-1 h-3 bg-[#1b3b2b] dark:bg-[#34d399] rounded-full animate-[pulse_1s_infinite_100ms]" />
+            <span className="w-1 h-5 bg-[#d4af37] rounded-full animate-[pulse_1s_infinite_250ms]" />
+            <span className="w-1 h-2 bg-[#1b3b2b] dark:bg-[#34d399] rounded-full animate-[pulse_1s_infinite_400ms]" />
+            <span className="w-1 h-4 bg-[#d4af37] rounded-full animate-[pulse_1s_infinite_150ms]" />
           </div>
         )}
       </div>

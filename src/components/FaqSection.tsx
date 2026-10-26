@@ -59,19 +59,22 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-24 bg-white dark:bg-[#0a0a0e] relative transition-colors duration-300">
+    <section id="faq" className="py-24 bg-[#fbf9f5] dark:bg-[#121110] relative transition-colors duration-300">
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-[#d4af37]/5 blur-[150px] pointer-events-none rounded-full" />
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/70 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-semibold mb-3">
-            <HelpCircle className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>Patient Guidance</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f4efe4] dark:bg-[#1c1a17] border border-[#d4af37]/35 dark:border-[#d4af37]/25 text-[#1b3b2b] dark:text-[#f3d987] text-xs font-semibold mb-3 shadow-sm">
+            <HelpCircle className="w-3.5 h-3.5 text-[#d4af37]" />
+            <span>Patient Guidance & Clarity</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 dark:text-white tracking-tight">
-            Frequently Asked <span className="text-emerald-600 dark:emerald-glow-text">Questions</span>
+          <h2 className="font-editorial text-3xl sm:text-4xl font-semibold text-[#1c1b18] dark:text-[#fbf9f5] tracking-tight">
+            Frequently Asked <span className="font-editorial-italic sage-glow-text">Questions</span>
           </h2>
-          <p className="text-sm text-neutral-600 dark:text-gray-400 mt-3">
-            Everything you need to know about our clinical acupuncture, Hijama protocols, and
-            clinic visits.
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-3 font-light">
+            Everything you need to know about our clinical acupuncture protocols, authentic Hijama sessions, and
+            sanctuary visits.
           </p>
         </div>
 
@@ -82,19 +85,19 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-neutral-50/80 dark:bg-[#121218] border border-neutral-200/90 dark:border-white/[0.08] hover:border-emerald-500/40 transition-colors overflow-hidden shadow-sm dark:shadow-none"
+                className="rounded-2xl bg-white dark:bg-[#181715] border border-[#1b3b2b]/10 dark:border-[#d4af37]/20 hover:border-[#d4af37]/45 transition-all overflow-hidden shadow-sm dark:shadow-md"
               >
                 <button
                   type="button"
                   onClick={() => toggle(idx)}
                   className="w-full text-left p-5 flex items-center justify-between gap-4"
                 >
-                  <span className="font-semibold text-sm sm:text-base text-neutral-900 dark:text-white">
+                  <span className="font-editorial font-medium text-sm sm:text-base text-[#1c1b18] dark:text-[#fbf9f5]">
                     {faq.question}
                   </span>
                   <div
-                    className={`p-1.5 rounded-full bg-neutral-200/60 dark:bg-white/[0.06] text-emerald-600 dark:text-emerald-400 transition-transform duration-300 ${
-                      isOpen ? "rotate-180 bg-emerald-100 dark:bg-emerald-500/20" : ""
+                    className={`p-1.5 rounded-full bg-[#f5f1e8] dark:bg-[#201e1b] text-[#1b3b2b] dark:text-[#f3d987] transition-transform duration-300 shrink-0 ${
+                      isOpen ? "rotate-180 bg-[#1b3b2b] text-[#fbf9f5] dark:bg-[#1b3b2b]" : ""
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -109,7 +112,7 @@ export default function FaqSection() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25, ease: "easeInOut" }}
                     >
-                      <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-neutral-600 dark:text-gray-300 leading-relaxed border-t border-neutral-200/70 dark:border-white/[0.04]">
+                      <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed border-t border-[#1b3b2b]/5 dark:border-white/[0.05]">
                         {faq.answer}
                       </div>
                     </motion.div>
@@ -120,18 +123,18 @@ export default function FaqSection() {
           })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-12 text-center p-6 rounded-2xl bg-neutral-50 dark:bg-[#13131c] border border-neutral-200 dark:border-white/[0.06] shadow-sm dark:shadow-none">
-          <p className="text-xs sm:text-sm text-neutral-600 dark:text-gray-300 mb-3">
-            Have a specific medical question about your condition?
+        {/* Bottom Concierge Card */}
+        <div className="mt-12 text-center p-7 rounded-3xl bg-[#f8f5ee] dark:bg-[#181715] border border-[#d4af37]/25 shadow-sm dark:shadow-xl">
+          <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 mb-4 font-light">
+            Have a specific clinical or personal inquiry regarding your condition?
           </p>
           <button
             type="button"
             onClick={() => openBooking("General Wellness Consultation")}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white dark:bg-emerald-500 dark:hover:bg-emerald-400 dark:text-black shadow-lg shadow-emerald-600/20 transition active:scale-95"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-semibold bg-[#1b3b2b] hover:bg-[#234b37] text-[#fbf9f5] border border-[#d4af37]/40 shadow-lg shadow-[#1b3b2b]/15 transition active:scale-95"
           >
-            <MessageSquare className="w-4 h-4 fill-current" />
-            <span>Chat Directly on WhatsApp</span>
+            <MessageSquare className="w-4 h-4 text-[#d4af37]" />
+            <span>Inquire Directly with Concierge Desk</span>
           </button>
         </div>
       </div>

@@ -13,6 +13,8 @@ import {
   CheckCircle2,
   Clock,
   ChevronRight,
+  Compass,
+  MessageSquare,
 } from "lucide-react";
 import { useBooking } from "@/context/BookingContext";
 
@@ -98,33 +100,17 @@ const SYMPTOMS: SymptomData[] = [
     id: "migraine",
     name: "Migraines & Chronic Headaches",
     tag: "Neurological Tension",
-    meridianNote: "Liver Fire rising upwards and vascular constriction along the temporoparietal head channels.",
-    recommendedService: "Chronic & Acute Pain Management",
-    serviceCategory: "Targeted Cranial Acupressure & Cupping",
+    meridianNote: "Gallbladder & Liver Fire meridian upward flair with tense cervical fascia restriction.",
+    recommendedService: "Acupuncture & Acupressure Session",
+    serviceCategory: "Cranial Acupoint Decompression",
     benefits: [
-      "Rapid abortive relief for acute throbbing headache episodes",
-      "Significantly reduces monthly migraine attack frequency",
-      "Reduces sensory light and sound sensitivity",
+      "Calms hyper-excitable cerebral vascular tension",
+      "Promotes sustained nitric oxide vasodilation",
+      "Reduces recurrence frequency and pain intensity",
     ],
     expectedSessions: "3 to 5 sessions",
-    reliefRate: "93% Frequency Drop",
+    reliefRate: "92% Headache Relief",
     icon: Brain,
-  },
-  {
-    id: "stress",
-    name: "Insomnia, Anxiety & Mental Fatigue",
-    tag: "Nervous System Reset",
-    meridianNote: "Hyperactive sympathetic nervous system and Shen (mind) imbalance disrupting delta sleep.",
-    recommendedService: "Stress, Depression & Anxiety Relief",
-    serviceCategory: "Vagus Nerve & Calming Meridian Therapy",
-    benefits: [
-      "Triggers deep parasympathetic state within 15 minutes",
-      "Promotes deep restorative REM sleep without sedatives",
-      "Alleviates nervous chest tightness and chronic anxiety palpitations",
-    ],
-    expectedSessions: "3 to 5 calming sessions",
-    reliefRate: "96% Sleep Quality Improvement",
-    icon: Sparkles,
   },
 ];
 
@@ -136,22 +122,22 @@ export default function SymptomChecker() {
   const CurrentIcon = current.icon;
 
   return (
-    <section className="py-20 bg-[#0a0a0e] relative overflow-hidden">
+    <section className="py-24 bg-[#fbf9f5] dark:bg-[#121110] relative overflow-hidden transition-colors duration-300">
       {/* Glow highlight */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-emerald-500/5 blur-[120px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-[#d4af37]/6 blur-[150px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-3">
-            <Activity className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f4efe4] dark:bg-[#1c1a17] border border-[#d4af37]/35 dark:border-[#d4af37]/25 text-[#1b3b2b] dark:text-[#f3d987] text-xs font-semibold mb-3 shadow-sm">
+            <Compass className="w-3.5 h-3.5 text-[#d4af37]" />
             <span>Interactive Health & Symptom Diagnostic</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="font-editorial text-3xl sm:text-5xl font-semibold text-[#1c1b18] dark:text-[#fbf9f5] tracking-tight">
             Where Does It Hurt? Find Your{" "}
-            <span className="emerald-glow-text">Targeted Healing Protocol</span>
+            <span className="font-editorial-italic sage-glow-text">Targeted Healing Protocol</span>
           </h2>
-          <p className="text-sm sm:text-base text-gray-400 mt-3">
+          <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-3 font-light">
             Select your primary health concern below to explore Dr. M. Shasath Begum&apos;s
             clinical meridian protocol and expected recovery timeline.
           </p>
@@ -161,7 +147,7 @@ export default function SymptomChecker() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left: Selectable Symptom Cards */}
           <div className="lg:col-span-5 space-y-2.5">
-            <div className="text-xs font-semibold uppercase tracking-wider text-gray-400 px-1 mb-2">
+            <div className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 px-1 mb-2">
               Select Your Condition:
             </div>
             {SYMPTOMS.map((item) => {
@@ -174,31 +160,31 @@ export default function SymptomChecker() {
                   type="button"
                   className={`w-full text-left p-3.5 rounded-2xl border transition-all flex items-center justify-between ${
                     isActive
-                      ? "bg-gradient-to-r from-emerald-950/70 to-[#161622] border-emerald-400/80 shadow-lg shadow-emerald-950/50 ring-1 ring-emerald-400/30"
-                      : "bg-[#121218] border-white/[0.06] hover:bg-[#181822] hover:border-emerald-500/30 text-gray-300"
+                      ? "bg-white dark:bg-[#181715] border-[#d4af37] shadow-md ring-1 ring-[#d4af37]/30"
+                      : "bg-[#f8f5ee] dark:bg-[#151412] border-[#1b3b2b]/10 dark:border-white/[0.06] hover:bg-white dark:hover:bg-[#1a1917] text-neutral-700 dark:text-neutral-300"
                   }`}
                 >
                   <div className="flex items-center gap-3">
                     <div
                       className={`p-2 rounded-xl ${
                         isActive
-                          ? "bg-emerald-400 text-black shadow-md"
-                          : "bg-white/[0.05] text-emerald-400"
+                          ? "bg-[#1b3b2b] text-[#fbf9f5] shadow-sm"
+                          : "bg-white dark:bg-white/[0.05] text-[#1b3b2b] dark:text-[#f3d987]"
                       }`}
                     >
                       <Icon className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="font-semibold text-sm text-white">
+                      <div className="font-editorial font-semibold text-sm text-[#1c1b18] dark:text-white">
                         {item.name}
                       </div>
-                      <span className="text-[11px] text-gray-400">{item.tag}</span>
+                      <span className="text-[11px] text-neutral-500 dark:text-neutral-400">{item.tag}</span>
                     </div>
                   </div>
 
                   <ChevronRight
                     className={`w-4 h-4 transition-transform ${
-                      isActive ? "text-emerald-400 translate-x-1" : "text-gray-500"
+                      isActive ? "text-[#d4af37] translate-x-1" : "text-neutral-400"
                     }`}
                   />
                 </button>
@@ -215,95 +201,55 @@ export default function SymptomChecker() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.25 }}
-                className="bg-[#12121a] border border-emerald-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl shadow-emerald-950/30 relative overflow-hidden"
+                className="bg-white dark:bg-[#181715] border border-[#1b3b2b]/10 dark:border-[#d4af37]/25 rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden"
               >
-                {/* Glow accent */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[90px] pointer-events-none rounded-full" />
-
-                <div className="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-white/[0.08]">
+                <div className="flex items-start justify-between gap-4 mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="p-3 rounded-2xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                    <div className="p-3 rounded-2xl bg-[#1b3b2b] text-[#fbf9f5] dark:bg-[#1f3f2f] dark:text-[#f3d987] shadow-sm">
                       <CurrentIcon className="w-6 h-6" />
                     </div>
                     <div>
-                      <span className="text-xs font-semibold text-emerald-400 tracking-wide uppercase">
-                        Clinical Protocol
-                      </span>
-                      <h3 className="text-xl sm:text-2xl font-bold text-white">
+                      <h3 className="font-editorial text-xl font-semibold text-[#1c1b18] dark:text-white">
                         {current.name}
                       </h3>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <span className="px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300 text-xs font-bold border border-emerald-500/30">
-                      {current.reliefRate}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Meridian diagnosis explanation */}
-                <div className="py-5 space-y-4">
-                  <div className="p-4 rounded-2xl bg-black/40 border border-white/[0.06]">
-                    <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
-                      Meridian & Anatomical Diagnosis:
-                    </div>
-                    <p className="text-sm text-gray-200 leading-relaxed">
-                      {current.meridianNote}
-                    </p>
-                  </div>
-
-                  <div>
-                    <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2.5">
-                      Key Therapeutic Actions:
-                    </div>
-                    <div className="space-y-2">
-                      {current.benefits.map((b, i) => (
-                        <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-gray-300">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                          <span>{b}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Treatment plan meta */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                    <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/[0.06]">
-                      <div className="text-[11px] text-gray-400 flex items-center gap-1.5 mb-1">
-                        <Clock className="w-3.5 h-3.5 text-amber-400" />
-                        Treatment Horizon:
-                      </div>
-                      <div className="text-xs sm:text-sm font-bold text-white">
-                        {current.expectedSessions}
-                      </div>
-                    </div>
-
-                    <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/[0.06]">
-                      <div className="text-[11px] text-gray-400 flex items-center gap-1.5 mb-1">
-                        <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                        Recommended Modality:
-                      </div>
-                      <div className="text-xs sm:text-sm font-bold text-emerald-300">
+                      <span className="text-xs text-[#855f10] dark:text-[#f3d987] font-medium">
                         {current.serviceCategory}
-                      </div>
+                      </span>
                     </div>
                   </div>
+                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-[#f4efe4] dark:bg-[#1c1a17] text-[#1b3b2b] dark:text-[#f3d987] border border-[#d4af37]/35">
+                    {current.reliefRate}
+                  </span>
                 </div>
 
-                {/* CTA inside card */}
-                <div className="pt-5 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <div className="text-xs text-gray-400 text-center sm:text-left">
-                    Direct consultation with <strong className="text-white">Dr. M. Shasath Begum</strong>
-                  </div>
+                <div className="mb-4 p-3.5 rounded-2xl bg-[#f8f5ee] dark:bg-[#141311] border border-[#d4af37]/20 text-xs text-neutral-700 dark:text-neutral-300">
+                  <strong className="text-[#1c1b18] dark:text-white block mb-0.5 font-semibold">Meridian Diagnosis:</strong>
+                  {current.meridianNote}
+                </div>
 
+                <div className="space-y-2 mb-6">
+                  <span className="text-xs font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider block">
+                    Expected Therapeutic Benefits:
+                  </span>
+                  {current.benefits.map((b, i) => (
+                    <div key={i} className="flex items-center gap-2 text-xs text-neutral-700 dark:text-neutral-300">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#d4af37] shrink-0" />
+                      <span>{b}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="pt-4 border-t border-[#1b3b2b]/10 dark:border-white/[0.08] flex items-center justify-between">
+                  <span className="text-xs text-neutral-500 dark:text-neutral-400">
+                    Recommended: {current.expectedSessions}
+                  </span>
                   <button
                     type="button"
                     onClick={() => openBooking(current.recommendedService)}
-                    className="w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-xs bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-black shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2 transition-all transform active:scale-95"
+                    className="px-5 py-2.5 rounded-xl text-xs font-semibold bg-[#1b3b2b] hover:bg-[#234b37] text-[#fbf9f5] border border-[#d4af37]/40 shadow-md shadow-[#1b3b2b]/15 flex items-center gap-2 transition active:scale-95"
                   >
-                    <span>Book {current.name} on WhatsApp</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <MessageSquare className="w-3.5 h-3.5 text-[#d4af37]" />
+                    <span>Book Clinical Consultation</span>
                   </button>
                 </div>
               </motion.div>

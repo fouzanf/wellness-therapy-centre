@@ -14,7 +14,7 @@ import {
   ArrowRight,
   MessageSquare,
   ShieldCheck,
-  Filter,
+  Compass,
 } from "lucide-react";
 import { useBooking } from "@/context/BookingContext";
 
@@ -182,21 +182,21 @@ export default function TreatmentsPage() {
       : TREATMENTS_LIST.filter((t) => t.category === activeCategory);
 
   return (
-    <div className="py-16 sm:py-24 bg-white dark:bg-[#0a0a0c] min-h-screen transition-colors duration-300">
+    <div className="py-16 sm:py-24 bg-[#fbf9f5] dark:bg-[#121110] min-h-screen transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Banner */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/70 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-semibold mb-3">
-            <Activity className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f4efe4] dark:bg-[#1c1a17] border border-[#d4af37]/35 dark:border-[#d4af37]/25 text-[#1b3b2b] dark:text-[#f3d987] text-xs font-semibold mb-3 shadow-sm">
+            <Compass className="w-3.5 h-3.5 text-[#d4af37]" />
             <span>Comprehensive Clinical Directory</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight">
+          <h1 className="font-editorial text-3xl sm:text-5xl font-semibold text-[#1c1b18] dark:text-[#fbf9f5] tracking-tight">
             Holistic Treatments at{" "}
-            <span className="text-emerald-600 dark:emerald-glow-text">Wellness Therapy Centre</span>
+            <span className="font-editorial-italic sage-glow-text">Wellness Therapy Centre</span>
           </h1>
-          <p className="text-sm sm:text-base text-neutral-600 dark:text-gray-400 mt-4 leading-relaxed">
+          <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed font-light">
             Discover our spectrum of natural therapies administered personally by{" "}
-            <strong className="text-neutral-900 dark:text-white">Dr. M. Shasath Begum, M.D(Acu.)</strong> in J.P.
+            <strong className="text-[#1c1b18] dark:text-white font-semibold">Dr. M. Shasath Begum, M.D(Acu.)</strong> in J.P.
             Nagar, Bangalore. Select any category to view treatment protocols.
           </p>
         </div>
@@ -214,10 +214,10 @@ export default function TreatmentsPage() {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+              className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
                 activeCategory === cat.id
-                  ? "bg-emerald-600 text-white dark:bg-emerald-500 dark:text-black shadow-lg shadow-emerald-500/25"
-                  : "bg-neutral-100 hover:bg-neutral-200 text-neutral-700 dark:bg-[#14141c] dark:text-gray-400 dark:hover:text-white dark:hover:bg-[#1a1a24] border border-neutral-200 dark:border-white/[0.06]"
+                  ? "bg-[#1b3b2b] text-[#fbf9f5] border border-[#d4af37]/50 shadow-md shadow-[#1b3b2b]/20"
+                  : "bg-white/90 hover:bg-[#f5f1e8] text-neutral-700 dark:bg-[#181715] dark:text-neutral-300 dark:hover:text-white dark:hover:bg-[#201e1b] border border-[#1b3b2b]/10 dark:border-white/[0.08]"
               }`}
             >
               {cat.label}
@@ -235,40 +235,40 @@ export default function TreatmentsPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="bg-neutral-50/80 dark:bg-[#121218] border border-neutral-200/90 dark:border-white/[0.08] hover:border-emerald-500/40 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all shadow-md dark:shadow-xl"
+                className="bg-white dark:bg-[#181715] border border-[#1b3b2b]/10 dark:border-[#d4af37]/25 hover:border-[#d4af37]/60 rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all shadow-md hover:shadow-xl dark:shadow-xl"
               >
                 <div>
                   {/* Top Bar */}
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="p-3 rounded-2xl bg-emerald-100 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-400">
+                      <div className="p-3 rounded-2xl bg-[#1b3b2b] text-[#fbf9f5] dark:bg-[#1f3f2f] dark:text-[#f3d987] shadow-sm">
                         <Icon className="w-6 h-6" />
                       </div>
                       <div>
-                        <h2 className="text-xl font-bold text-neutral-900 dark:text-white">{item.title}</h2>
-                        <span className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">
+                        <h2 className="font-editorial text-xl font-semibold text-[#1c1b18] dark:text-white">{item.title}</h2>
+                        <span className="text-xs text-[#855f10] dark:text-[#f3d987] font-medium">
                           {item.duration}
                         </span>
                       </div>
                     </div>
-                    <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-neutral-200/60 dark:bg-white/[0.06] text-neutral-700 dark:text-gray-300 border border-neutral-300 dark:border-white/[0.08] shrink-0">
+                    <span className="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-[#f4efe4] dark:bg-[#1c1a17] text-[#1b3b2b] dark:text-[#f3d987] border border-[#d4af37]/30 shrink-0">
                       {item.badge}
                     </span>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-gray-300 mb-6 italic">
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 mb-6 italic font-light">
                     {item.tagline}
                   </p>
 
                   {/* Indications */}
                   <div className="mb-6">
-                    <div className="text-xs font-bold text-neutral-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+                    <div className="text-xs font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider mb-2">
                       Primary Conditions Addressed:
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {item.indications.map((ind, i) => (
-                        <div key={i} className="flex items-center gap-2 text-xs text-neutral-700 dark:text-gray-300">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                        <div key={i} className="flex items-center gap-2 text-xs text-neutral-700 dark:text-neutral-300">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#d4af37] shrink-0" />
                           <span>{ind}</span>
                         </div>
                       ))}
@@ -276,35 +276,35 @@ export default function TreatmentsPage() {
                   </div>
 
                   {/* Step-by-Step Clinical Protocol */}
-                  <div className="mb-6 p-4 rounded-2xl bg-white dark:bg-black/40 border border-neutral-200/80 dark:border-white/[0.05] space-y-2 shadow-sm dark:shadow-none">
-                    <div className="text-xs font-bold text-neutral-800 dark:text-gray-300 uppercase tracking-wider mb-1">
+                  <div className="mb-6 p-4 rounded-2xl bg-[#f8f5ee] dark:bg-[#141311] border border-[#d4af37]/20 space-y-2">
+                    <div className="text-xs font-bold text-[#1c1b18] dark:text-neutral-200 uppercase tracking-wider mb-1">
                       Session Procedure & Protocol:
                     </div>
                     {item.protocolSteps.map((step, idx) => (
-                      <div key={idx} className="text-xs text-neutral-600 dark:text-gray-400 leading-relaxed">
+                      <div key={idx} className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
                         {step}
                       </div>
                     ))}
                   </div>
 
                   {/* Physiological mechanism */}
-                  <div className="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-500/20 text-xs text-neutral-800 dark:text-emerald-300/90 leading-relaxed mb-6">
-                    <strong className="text-neutral-900 dark:text-white block mb-0.5">Physiological Benefit:</strong>
+                  <div className="p-3.5 rounded-xl bg-[#f4efe4] dark:bg-[#1c1a17] border border-[#d4af37]/30 text-xs text-neutral-800 dark:text-[#f3d987] leading-relaxed mb-6">
+                    <strong className="text-[#1c1b18] dark:text-white block mb-0.5 font-semibold">Physiological Benefit:</strong>
                     {item.physiologicalImpact}
                   </div>
                 </div>
 
                 {/* Card CTA */}
-                <div className="pt-4 border-t border-neutral-200 dark:border-white/[0.08] flex items-center justify-between">
-                  <span className="text-xs text-neutral-500 dark:text-gray-400">
+                <div className="pt-4 border-t border-[#1b3b2b]/10 dark:border-white/[0.08] flex items-center justify-between">
+                  <span className="text-xs text-neutral-500 dark:text-neutral-400">
                     Consultation with Dr. Shasath Begum
                   </span>
                   <button
                     type="button"
                     onClick={() => openBooking(item.id)}
-                    className="px-5 py-2.5 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white dark:bg-emerald-500 dark:hover:bg-emerald-400 dark:text-black shadow-lg shadow-emerald-500/25 flex items-center gap-2 transition active:scale-95"
+                    className="px-5 py-2.5 rounded-xl text-xs font-semibold bg-[#1b3b2b] hover:bg-[#234b37] text-[#fbf9f5] border border-[#d4af37]/40 shadow-md shadow-[#1b3b2b]/15 flex items-center gap-2 transition active:scale-95"
                   >
-                    <MessageSquare className="w-3.5 h-3.5 fill-current" />
+                    <MessageSquare className="w-3.5 h-3.5 text-[#d4af37]" />
                     <span>Book on WhatsApp</span>
                   </button>
                 </div>

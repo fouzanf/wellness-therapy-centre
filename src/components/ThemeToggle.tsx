@@ -29,14 +29,14 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="p-2.5 rounded-full bg-neutral-100 dark:bg-[#16161e] text-neutral-800 dark:text-amber-300 hover:bg-neutral-200 dark:hover:bg-[#20202c] border border-neutral-200 dark:border-white/10 transition-all shadow-sm flex items-center justify-center"
+      className="p-2.5 rounded-full bg-white/90 dark:bg-[#1a1917] text-[#1c1b18] dark:text-[#f3d987] hover:bg-[#f5f1e8] dark:hover:bg-[#24211d] border border-[#d4af37]/30 dark:border-[#d4af37]/25 transition-all shadow-sm flex items-center justify-center"
       aria-label="Toggle Theme"
-      title={isDark ? "Switch to Clinical Light Mode" : "Switch to Obsidian Dark Mode"}
+      title={isDark ? "Switch to Warm Ivory Sanctuary Mode" : "Switch to Espresso Charcoal Sanctuary Mode"}
     >
       {isDark ? (
-        <Sun className="w-4 h-4 text-amber-400 rotate-0 scale-100 transition-transform" />
+        <Sun className="w-4 h-4 text-[#d4af37] rotate-0 scale-100 transition-transform" />
       ) : (
-        <Moon className="w-4 h-4 text-emerald-600 -rotate-90 scale-100 transition-transform" />
+        <Moon className="w-4 h-4 text-[#1b3b2b] -rotate-90 scale-100 transition-transform" />
       )}
     </button>
   );

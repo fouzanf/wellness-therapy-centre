@@ -256,122 +256,120 @@ Please confirm my appointment slot. Thanks!`;
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={handleClose}
-          className="fixed inset-0 bg-black/85 backdrop-blur-md"
+          className="fixed inset-0 bg-[#121110]/80 backdrop-blur-md"
         />
 
-        {/* Modal Window */}
+        {/* Modal Window: Concierge Medical Sanctuary Desk */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
-          className="relative w-[95%] sm:w-full max-w-lg lg:max-w-2xl max-h-[92vh] flex flex-col bg-white dark:bg-[#0f0f14] border border-neutral-200 dark:border-emerald-500/20 rounded-2xl sm:rounded-3xl shadow-2xl shadow-neutral-900/10 dark:shadow-emerald-950/40 overflow-hidden overscroll-contain z-10 my-auto transition-colors duration-300"
+          className="relative w-[95%] sm:w-full max-w-lg lg:max-w-2xl max-h-[92vh] flex flex-col bg-[#fbf9f5] dark:bg-[#161513] border border-[#d4af37]/35 dark:border-[#d4af37]/25 rounded-3xl shadow-2xl shadow-black/40 overflow-hidden overscroll-contain z-10 my-auto transition-colors duration-300"
           onWheel={(e) => e.stopPropagation()}
           onTouchMove={(e) => e.stopPropagation()}
         >
           {/* Header Bar */}
-          <div className="relative px-4 sm:px-6 py-4 sm:py-5 border-b border-neutral-200 dark:border-white/[0.08] bg-gradient-to-r from-emerald-50 via-neutral-100 to-white dark:from-emerald-950/40 dark:via-[#13131b] dark:to-black">
+          <div className="relative px-5 sm:px-7 py-5 sm:py-6 border-b border-[#d4af37]/20 bg-gradient-to-r from-[#f5f1e8] via-[#fbf9f5] to-[#f5f1e8] dark:from-[#1b1916] dark:via-[#161513] dark:to-[#1b1916]">
             <div className="flex items-center justify-between">
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                  <span className="text-xs font-semibold tracking-wider text-emerald-700 dark:text-emerald-400 uppercase">
-                    Direct Clinic Booking
+                  <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-ping" />
+                  <span className="text-[11px] font-bold tracking-widest text-[#855f10] dark:text-[#f3d987] uppercase">
+                    Private Medical Concierge Desk
                   </span>
                 </div>
-                <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white mt-1">
-                  Book with Dr. M. Shasath Begum
+                <h2 className="font-editorial text-xl sm:text-2xl font-semibold text-[#1c1b18] dark:text-[#fbf9f5] mt-1">
+                  Consultation with Dr. M. Shasath Begum
                 </h2>
-                <p className="text-xs sm:text-sm text-neutral-600 dark:text-gray-400">
-                  M.D(Acu.) • J.P. Nagar, Bangalore • WhatsApp Instant Confirmation
+                <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-0.5">
+                  Senior Holistic Physician • M.D(Acu.) • Priority WhatsApp Dispatch
                 </p>
               </div>
 
               <button
                 onClick={handleClose}
                 aria-label="Close booking modal"
-                className="p-2 text-neutral-500 hover:text-neutral-900 hover:bg-neutral-200/60 dark:text-gray-400 dark:hover:text-white dark:hover:bg-white/[0.08] rounded-full transition-colors"
+                className="p-2 text-neutral-500 hover:text-neutral-900 hover:bg-[#eae5d8] dark:text-neutral-400 dark:hover:text-white dark:hover:bg-white/[0.08] rounded-full transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             {/* Stepper Progress */}
-            <div className="flex items-center justify-between mt-5 pt-3 border-t border-white/[0.06] text-xs font-medium">
+            <div className="flex items-center justify-between mt-5 pt-3 border-t border-[#d4af37]/20 text-xs font-medium">
               <div
                 className={`flex items-center gap-2 ${
-                  currentStep >= 1 ? "text-emerald-400" : "text-gray-500"
+                  currentStep >= 1 ? "text-[#1b3b2b] dark:text-[#f3d987] font-semibold" : "text-neutral-400"
                 }`}
               >
                 <div
-                  className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                  className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-colors ${
                     currentStep >= 1
-                      ? "bg-emerald-500 text-black font-semibold"
-                      : "bg-white/10 text-gray-400"
+                      ? "bg-[#1b3b2b] text-[#fbf9f5] dark:bg-[#d4af37] dark:text-[#121110]"
+                      : "bg-neutral-200 dark:bg-white/10 text-neutral-500"
                   }`}
                 >
                   1
                 </div>
-                <span className="hidden sm:inline">Select Service</span>
+                <span className="hidden sm:inline">Clinical Therapy</span>
               </div>
 
               <div
-                className={`h-0.5 flex-1 mx-3 ${
-                  currentStep >= 2 ? "bg-emerald-500/60" : "bg-white/10"
+                className={`h-0.5 flex-1 mx-3 transition-colors ${
+                  currentStep >= 2 ? "bg-[#d4af37]" : "bg-neutral-200 dark:bg-white/10"
                 }`}
               />
 
               <div
                 className={`flex items-center gap-2 ${
-                  currentStep >= 2 ? "text-emerald-400" : "text-gray-500"
+                  currentStep >= 2 ? "text-[#1b3b2b] dark:text-[#f3d987] font-semibold" : "text-neutral-400"
                 }`}
               >
                 <div
-                  className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                  className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-colors ${
                     currentStep >= 2
-                      ? "bg-emerald-500 text-black font-semibold"
-                      : "bg-white/10 text-gray-400"
+                      ? "bg-[#1b3b2b] text-[#fbf9f5] dark:bg-[#d4af37] dark:text-[#121110]"
+                      : "bg-neutral-200 dark:bg-white/10 text-neutral-500"
                   }`}
                 >
                   2
                 </div>
-                <span className="hidden sm:inline">Date & Time</span>
+                <span className="hidden sm:inline">Sanctuary Slot</span>
               </div>
 
               <div
-                className={`h-0.5 flex-1 mx-3 ${
-                  currentStep >= 3 ? "bg-emerald-500/60" : "bg-white/10"
+                className={`h-0.5 flex-1 mx-3 transition-colors ${
+                  currentStep >= 3 ? "bg-[#d4af37]" : "bg-neutral-200 dark:bg-white/10"
                 }`}
               />
 
               <div
                 className={`flex items-center gap-2 ${
-                  currentStep >= 3 ? "text-emerald-400" : "text-gray-500"
+                  currentStep >= 3 ? "text-[#1b3b2b] dark:text-[#f3d987] font-semibold" : "text-neutral-400"
                 }`}
               >
                 <div
-                  className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                  className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold transition-colors ${
                     currentStep >= 3
-                      ? "bg-emerald-500 text-black font-semibold"
-                      : "bg-white/10 text-gray-400"
+                      ? "bg-[#1b3b2b] text-[#fbf9f5] dark:bg-[#d4af37] dark:text-[#121110]"
+                      : "bg-neutral-200 dark:bg-white/10 text-neutral-500"
                   }`}
                 >
                   3
                 </div>
-                <span className="hidden sm:inline">Your Details</span>
+                <span className="hidden sm:inline">Patient Profile</span>
               </div>
             </div>
           </div>
 
           {/* Modal Body */}
           <div 
-            className="flex-1 overflow-y-auto overscroll-contain p-4 sm:p-6 pb-32 sm:pb-8 max-h-[62vh] sm:max-h-[68vh] space-y-4"
+            className="flex-1 overflow-y-auto overscroll-contain p-5 sm:p-7 pb-32 sm:pb-8 max-h-[62vh] sm:max-h-[68vh] space-y-4"
             onWheel={(e) => {
-              // Stop wheel events from bleeding to background
               e.stopPropagation();
             }}
             onTouchMove={(e) => {
-              // Stop touch drag events from bleeding to background
               e.stopPropagation();
             }}
           >
@@ -384,19 +382,19 @@ Please confirm my appointment slot. Thanks!`;
                 className="space-y-4"
               >
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-base font-semibold text-gray-200">
-                    Step 1: Choose Your Therapy or Consultation
+                  <h3 className="font-editorial text-base sm:text-lg font-semibold text-[#1c1b18] dark:text-[#fbf9f5]">
+                    Select Your Clinical Modality:
                   </h3>
-                  <span className="text-xs text-emerald-400 font-medium">
-                    6 Specialized Treatments
+                  <span className="text-xs text-[#855f10] dark:text-[#f3d987] font-semibold">
+                    6 Specialized Suites
                   </span>
                 </div>
 
                 {errors.service && (
-                  <p className="text-xs text-rose-400">{errors.service}</p>
+                  <p className="text-xs text-rose-500">{errors.service}</p>
                 )}
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   {SERVICES.map((s) => {
                     const Icon = s.icon;
                     const isSelected = selectedService === s.id;
@@ -408,28 +406,28 @@ Please confirm my appointment slot. Thanks!`;
                           setSelectedService(s.id);
                           setErrors({});
                         }}
-                        className={`text-left p-3.5 rounded-xl border transition-all duration-200 relative flex flex-col justify-between ${
+                        className={`text-left p-4 rounded-2xl border transition-all duration-200 relative flex flex-col justify-between ${
                           isSelected
-                            ? "bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 dark:border-emerald-400 shadow-md shadow-emerald-500/10 dark:shadow-emerald-900/30 ring-1 ring-emerald-500 dark:ring-emerald-400/50"
-                            : "bg-neutral-50 dark:bg-[#14141c] border-neutral-200 dark:border-white/[0.08] hover:border-emerald-500/30 hover:bg-neutral-100 dark:hover:bg-[#181822]"
+                            ? "bg-[#f4efe4] dark:bg-[#201d19] border-[#d4af37] shadow-md ring-1 ring-[#d4af37]/60"
+                            : "bg-white/80 dark:bg-[#1a1917] border-[#1b3b2b]/10 dark:border-[#d4af37]/15 hover:border-[#d4af37]/40 hover:bg-white dark:hover:bg-[#211f1c]"
                         }`}
                       >
-                        <div className="flex items-start justify-between w-full mb-2">
+                        <div className="flex items-start justify-between w-full mb-2.5">
                           <div
-                            className={`p-2 rounded-lg ${
+                            className={`p-2.5 rounded-xl ${
                               isSelected
-                                ? "bg-emerald-500 text-white dark:bg-emerald-400 dark:text-black"
-                                : "bg-neutral-200/70 dark:bg-white/[0.06] text-emerald-600 dark:text-emerald-400"
+                                ? "bg-[#1b3b2b] text-[#fbf9f5] dark:bg-[#d4af37] dark:text-[#121110]"
+                                : "bg-[#f5f1e8] dark:bg-white/[0.06] text-[#1b3b2b] dark:text-[#34d399]"
                             }`}
                           >
                             <Icon className="w-5 h-5" />
                           </div>
                           {s.badge && (
                             <span
-                              className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
+                              className={`text-[10px] font-semibold px-2.5 py-0.5 rounded-full ${
                                 isSelected
-                                  ? "bg-emerald-100 dark:bg-emerald-400/20 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-400/30"
-                                  : "bg-neutral-200/60 dark:bg-white/[0.06] text-neutral-600 dark:text-gray-400"
+                                  ? "bg-[#d4af37]/20 text-[#855f10] dark:text-[#f3d987] border border-[#d4af37]/40"
+                                  : "bg-neutral-100 dark:bg-white/[0.06] text-neutral-600 dark:text-neutral-400"
                               }`}
                             >
                               {s.badge}
@@ -438,13 +436,13 @@ Please confirm my appointment slot. Thanks!`;
                         </div>
 
                         <div>
-                          <div className="flex items-center gap-1.5 font-semibold text-sm text-neutral-900 dark:text-white">
+                          <div className="flex items-center gap-1.5 font-semibold text-sm text-[#1c1b18] dark:text-white">
                             {isSelected && (
-                              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                              <CheckCircle2 className="w-4 h-4 text-[#1b3b2b] dark:text-[#34d399] shrink-0" />
                             )}
                             <span>{s.title}</span>
                           </div>
-                          <p className="text-xs text-neutral-500 dark:text-gray-400 mt-1 line-clamp-2">
+                          <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1 line-clamp-2 leading-relaxed">
                             {s.subtitle}
                           </p>
                         </div>
@@ -464,18 +462,18 @@ Please confirm my appointment slot. Thanks!`;
                 className="space-y-6"
               >
                 <div>
-                  <h3 className="text-base font-semibold text-neutral-900 dark:text-gray-200 mb-1">
-                    Step 2: Select Date & Preferred Slot
+                  <h3 className="font-editorial text-base sm:text-lg font-semibold text-[#1c1b18] dark:text-[#fbf9f5] mb-1">
+                    Select Sanctuary Date & Window
                   </h3>
-                  <p className="text-xs text-neutral-500 dark:text-gray-400">
-                    Clinic open Mon – Sun (9:00 AM – 8:00 PM) at J.P. Nagar, Bangalore
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">
+                    Clinical consultations available Monday – Sunday (9:00 AM – 8:00 PM) at J.P. Nagar
                   </p>
                 </div>
 
                 {/* Date Picker */}
                 <div className="space-y-2">
-                  <label className="flex items-center gap-2 text-xs font-semibold text-neutral-700 dark:text-gray-300">
-                    <Calendar className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                  <label className="flex items-center gap-2 text-xs font-semibold text-neutral-700 dark:text-neutral-300">
+                    <Calendar className="w-4 h-4 text-[#1b3b2b] dark:text-[#34d399]" />
                     Appointment Date:
                   </label>
                   <input
@@ -486,18 +484,18 @@ Please confirm my appointment slot. Thanks!`;
                       setSelectedDate(e.target.value);
                       if (errors.date) setErrors({ ...errors, date: "" });
                     }}
-                    className="w-full px-4 py-3 bg-neutral-50 dark:bg-[#14141c] border border-neutral-300 dark:border-white/[0.1] rounded-xl text-neutral-900 dark:text-white focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 focus:ring-1 focus:ring-emerald-500 dark:focus:ring-emerald-400 transition"
+                    className="w-full px-4 py-3 bg-white dark:bg-[#1a1917] border border-[#d4af37]/30 dark:border-white/[0.1] rounded-2xl text-[#1c1b18] dark:text-white focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] transition shadow-sm"
                   />
                   {errors.date && (
-                    <p className="text-xs text-rose-500 dark:text-rose-400">{errors.date}</p>
+                    <p className="text-xs text-rose-500">{errors.date}</p>
                   )}
                 </div>
 
                 {/* Time Slot Buttons */}
                 <div className="space-y-2">
-                  <label className="flex items-center gap-2 text-xs font-semibold text-neutral-700 dark:text-gray-300">
-                    <Clock className="w-4 h-4 text-amber-500 dark:text-amber-400" />
-                    Preferred Time Window:
+                  <label className="flex items-center gap-2 text-xs font-semibold text-neutral-700 dark:text-neutral-300">
+                    <Clock className="w-4 h-4 text-[#d4af37]" />
+                    Preferred Consultation Window:
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                     {TIME_SLOTS.map((slot) => {
@@ -510,16 +508,16 @@ Please confirm my appointment slot. Thanks!`;
                             setSelectedTime(slot);
                             if (errors.time) setErrors({ ...errors, time: "" });
                           }}
-                          className={`px-3 py-3 rounded-xl border text-left text-xs font-medium transition-all ${
+                          className={`px-3.5 py-3 rounded-2xl border text-left text-xs font-medium transition-all ${
                             isSelected
-                              ? "bg-amber-50 dark:bg-amber-400/15 border-amber-500 dark:border-amber-400 text-amber-800 dark:text-amber-300 shadow-md ring-1 ring-amber-400/40"
-                              : "bg-neutral-50 dark:bg-[#14141c] border-neutral-200 dark:border-white/[0.08] text-neutral-700 dark:text-gray-300 hover:border-amber-400/40 hover:bg-neutral-100 dark:hover:bg-[#181822]"
+                              ? "bg-[#f4efe4] dark:bg-[#201d19] border-[#d4af37] text-[#1c1b18] dark:text-[#f3d987] shadow-md ring-1 ring-[#d4af37]/50"
+                              : "bg-white/80 dark:bg-[#1a1917] border-[#1b3b2b]/10 dark:border-white/[0.08] text-neutral-700 dark:text-neutral-300 hover:border-[#d4af37]/40 hover:bg-white dark:hover:bg-[#201e1b]"
                           }`}
                         >
-                          <div className="font-semibold text-neutral-900 dark:text-white mb-0.5">
+                          <div className="font-semibold text-[#1c1b18] dark:text-white mb-0.5">
                             {slot.split(" ")[0]}
                           </div>
-                          <div className="text-[11px] text-neutral-500 dark:text-gray-400">
+                          <div className="text-[11px] text-neutral-500 dark:text-neutral-400">
                             {slot.substring(slot.indexOf("("))}
                           </div>
                         </button>
@@ -527,22 +525,22 @@ Please confirm my appointment slot. Thanks!`;
                     })}
                   </div>
                   {errors.time && (
-                    <p className="text-xs text-rose-500 dark:text-rose-400">{errors.time}</p>
+                    <p className="text-xs text-rose-500">{errors.time}</p>
                   )}
                 </div>
 
                 {/* Summary Pill */}
-                <div className="p-3.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/25 border border-emerald-200 dark:border-emerald-500/20 text-xs text-neutral-700 dark:text-gray-300 flex items-center justify-between">
+                <div className="p-4 rounded-2xl bg-[#f5f1e8] dark:bg-[#1f1d1a] border border-[#d4af37]/25 text-xs text-neutral-700 dark:text-neutral-300 flex items-center justify-between shadow-sm">
                   <div>
-                    <span className="text-neutral-500 dark:text-gray-400 block text-[11px]">Chosen Service:</span>
-                    <span className="font-semibold text-emerald-700 dark:text-emerald-400">
+                    <span className="text-neutral-500 dark:text-neutral-400 block text-[11px]">Selected Clinical Service:</span>
+                    <span className="font-semibold text-[#1b3b2b] dark:text-[#34d399]">
                       {selectedService}
                     </span>
                   </div>
                   <button
                     type="button"
                     onClick={() => setCurrentStep(1)}
-                    className="text-xs text-emerald-600 dark:text-emerald-300 underline hover:text-emerald-800 dark:hover:text-emerald-200"
+                    className="text-xs font-semibold text-[#855f10] dark:text-[#f3d987] underline hover:text-[#1b3b2b]"
                   >
                     Change
                   </button>
@@ -560,18 +558,18 @@ Please confirm my appointment slot. Thanks!`;
                 className="space-y-4"
               >
                 <div>
-                  <h3 className="text-base font-semibold text-neutral-900 dark:text-gray-200 mb-1">
-                    Step 3: Patient Information & WhatsApp Dispatch
+                  <h3 className="font-editorial text-base sm:text-lg font-semibold text-[#1c1b18] dark:text-[#fbf9f5] mb-1">
+                    Patient Profile & Priority WhatsApp Dispatch
                   </h3>
-                  <p className="text-xs text-neutral-500 dark:text-gray-400">
-                    We will populate your WhatsApp message directly to Dr. Shasath Begum.
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400">
+                    Your appointment request is dispatched directly to Dr. Begum's private clinic desk.
                   </p>
                 </div>
 
                 {/* Patient Name */}
                 <div className="space-y-1.5">
-                  <label className="flex items-center gap-1.5 text-xs font-semibold text-neutral-700 dark:text-gray-300">
-                    <User className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                  <label className="flex items-center gap-1.5 text-xs font-semibold text-neutral-700 dark:text-neutral-300">
+                    <User className="w-3.5 h-3.5 text-[#1b3b2b] dark:text-[#34d399]" />
                     Patient Full Name *
                   </label>
                   <input
@@ -583,25 +581,25 @@ Please confirm my appointment slot. Thanks!`;
                       setUserName(e.target.value);
                       if (errors.name) setErrors({ ...errors, name: "" });
                     }}
-                    className={`w-full px-4 py-3 sm:py-2.5 bg-neutral-50 dark:bg-[#14141c] border rounded-xl text-neutral-900 dark:text-white text-base sm:text-sm focus:outline-none transition ${
+                    className={`w-full px-4 py-3 sm:py-2.5 bg-white dark:bg-[#1a1917] border rounded-2xl text-[#1c1b18] dark:text-white text-base sm:text-sm focus:outline-none transition shadow-sm ${
                       errors.name
                         ? "border-rose-500 focus:ring-1 focus:ring-rose-500"
-                        : "border-neutral-300 dark:border-white/[0.1] focus:border-emerald-500 dark:focus:border-emerald-400 focus:ring-1 focus:ring-emerald-500 dark:focus:ring-emerald-400"
+                        : "border-[#d4af37]/30 dark:border-white/[0.1] focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
                     }`}
                   />
                   {errors.name && (
-                    <p className="text-xs text-rose-500 dark:text-rose-400">{errors.name}</p>
+                    <p className="text-xs text-rose-500">{errors.name}</p>
                   )}
                 </div>
 
                 {/* Patient Phone Number */}
                 <div className="space-y-1.5">
-                  <label className="flex items-center gap-1.5 text-xs font-semibold text-neutral-700 dark:text-gray-300">
-                    <Phone className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                  <label className="flex items-center gap-1.5 text-xs font-semibold text-neutral-700 dark:text-neutral-300">
+                    <Phone className="w-3.5 h-3.5 text-[#1b3b2b] dark:text-[#34d399]" />
                     WhatsApp Mobile Number *
                   </label>
                   <div className="relative">
-                    <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-xs font-semibold text-neutral-500 dark:text-gray-400">
+                    <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-xs font-semibold text-neutral-500 dark:text-neutral-400">
                       +91
                     </span>
                     <input
@@ -613,64 +611,65 @@ Please confirm my appointment slot. Thanks!`;
                         setUserPhone(e.target.value);
                         if (errors.phone) setErrors({ ...errors, phone: "" });
                       }}
-                      className={`w-full pl-12 pr-4 py-3 sm:py-2.5 bg-neutral-50 dark:bg-[#14141c] border rounded-xl text-neutral-900 dark:text-white text-base sm:text-sm focus:outline-none transition ${
+                      className={`w-full pl-12 pr-4 py-3 sm:py-2.5 bg-white dark:bg-[#1a1917] border rounded-2xl text-[#1c1b18] dark:text-white text-base sm:text-sm focus:outline-none transition shadow-sm ${
                         errors.phone
                           ? "border-rose-500 focus:ring-1 focus:ring-rose-500"
-                          : "border-neutral-300 dark:border-white/[0.1] focus:border-emerald-500 dark:focus:border-emerald-400 focus:ring-1 focus:ring-emerald-500 dark:focus:ring-emerald-400"
+                          : "border-[#d4af37]/30 dark:border-white/[0.1] focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37]"
                       }`}
                     />
                   </div>
                   {errors.phone && (
-                    <p className="text-xs text-rose-500 dark:text-rose-400">{errors.phone}</p>
+                    <p className="text-xs text-rose-500">{errors.phone}</p>
                   )}
-                  <p className="text-[11px] text-neutral-500 dark:text-gray-500">
-                    Used to confirm your appointment and send clinic directions.
+                  <p className="text-[11px] text-neutral-500 dark:text-neutral-400">
+                    Used exclusively for clinic confirmation and private consultation coordination.
                   </p>
                 </div>
 
                 {/* Optional Symptoms / Notes */}
                 <div className="space-y-1.5">
-                  <label className="flex items-center gap-1.5 text-xs font-semibold text-neutral-700 dark:text-gray-300">
-                    <MessageSquare className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
-                    Specific Pain Area or Symptoms (Optional)
+                  <label className="flex items-center gap-1.5 text-xs font-semibold text-neutral-700 dark:text-neutral-300">
+                    <MessageSquare className="w-3.5 h-3.5 text-[#d4af37]" />
+                    Symptoms or Pain Focus Areas (Optional)
                   </label>
                   <textarea
                     rows={2}
-                    placeholder="e.g. Lower back pain for 6 months, neck stiffness, migraine attacks..."
+                    placeholder="e.g. Lumbar sciatica for 8 months, cervical spine stiffness, recurring migraine attacks..."
                     value={userNotes}
                     onChange={(e) => setUserNotes(e.target.value)}
-                    className="w-full px-4 py-2.5 sm:py-2 bg-neutral-50 dark:bg-[#14141c] border border-neutral-300 dark:border-white/[0.1] rounded-xl text-neutral-900 dark:text-white text-base sm:text-xs focus:outline-none focus:border-emerald-500 dark:focus:border-emerald-400 focus:ring-1 focus:ring-emerald-500 dark:focus:ring-emerald-400 transition resize-none"
+                    className="w-full px-4 py-2.5 sm:py-2 bg-white dark:bg-[#1a1917] border border-[#d4af37]/30 dark:border-white/[0.1] rounded-2xl text-[#1c1b18] dark:text-white text-base sm:text-xs focus:outline-none focus:border-[#d4af37] focus:ring-1 focus:ring-[#d4af37] transition resize-none shadow-sm"
                   />
                 </div>
 
                 {/* Preview Box */}
-                <div className="p-3 bg-neutral-100 dark:bg-black/40 border border-neutral-200 dark:border-white/[0.06] rounded-xl text-[11px] text-neutral-600 dark:text-gray-400 space-y-1">
-                  <div className="text-neutral-800 dark:text-gray-300 font-semibold flex items-center gap-1.5">
-                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                    Instant WhatsApp Dispatch Summary:
+                <div className="p-3.5 bg-[#f5f1e8] dark:bg-[#1a1917] border border-[#d4af37]/25 rounded-2xl text-[11px] text-neutral-600 dark:text-neutral-400 space-y-1 shadow-sm">
+                  <div className="text-[#1c1b18] dark:text-neutral-200 font-semibold flex items-center gap-1.5">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#1b3b2b] dark:text-[#34d399]" />
+                    Concierge Itinerary Summary:
                   </div>
-                  <div>• Service: <span className="text-neutral-900 dark:text-white">{selectedService}</span></div>
-                  <div>• Slot: <span className="text-neutral-900 dark:text-white">{selectedDate} ({selectedTime})</span></div>
-                  <div>• Practitioner: <span className="text-emerald-700 dark:text-emerald-300">Dr. M. Shasath Begum, M.D(Acu.)</span></div>
+                  <div>• Modality: <span className="text-[#1c1b18] dark:text-white font-medium">{selectedService}</span></div>
+                  <div>• Slot: <span className="text-[#1c1b18] dark:text-white font-medium">{selectedDate} ({selectedTime})</span></div>
+                  <div>• Physician: <span className="text-[#1b3b2b] dark:text-[#34d399] font-medium">Dr. M. Shasath Begum, M.D(Acu.)</span></div>
                 </div>
               </motion.form>
             )}
           </div>
 
           {/* Footer Controls */}
-          <div className="px-4 sm:px-6 py-3.5 sm:py-4 bg-neutral-50/98 dark:bg-[#0a0a0e]/98 backdrop-blur-md border-t border-neutral-200 dark:border-white/[0.08] flex items-center justify-between shrink-0 z-10">
+          <div className="px-5 sm:px-7 py-4 bg-[#f5f1e8] dark:bg-[#141311] border-t border-[#d4af37]/25 flex items-center justify-between shrink-0 z-10">
             {currentStep > 1 ? (
               <button
                 type="button"
                 onClick={handleBack}
-                className="flex items-center gap-1 px-4 py-2 rounded-xl text-xs font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-200/60 dark:text-gray-400 dark:hover:text-white dark:hover:bg-white/[0.06] transition"
+                className="flex items-center gap-1 px-4 py-2 rounded-xl text-xs font-semibold text-neutral-600 hover:text-neutral-900 hover:bg-[#eae5d8] dark:text-neutral-400 dark:hover:text-white dark:hover:bg-white/[0.06] transition"
               >
                 <ChevronLeft className="w-4 h-4" />
                 Back
               </button>
             ) : (
-              <div className="text-[11px] text-neutral-500 dark:text-gray-500">
-                Confidential & Secure
+              <div className="text-[11px] text-neutral-500 dark:text-neutral-400 flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#1b3b2b] dark:text-[#34d399]" />
+                <span>Confidential Medical Protocol</span>
               </div>
             )}
 
@@ -678,20 +677,20 @@ Please confirm my appointment slot. Thanks!`;
               <button
                 type="button"
                 onClick={handleNext}
-                className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-xs font-semibold bg-emerald-500 hover:bg-emerald-400 text-black shadow-lg shadow-emerald-500/25 transition-all transform active:scale-95"
+                className="flex items-center gap-1.5 px-6 py-3 rounded-xl text-xs font-semibold bg-[#1b3b2b] hover:bg-[#142e21] dark:bg-[#1f3f2f] text-[#fbf9f5] border border-[#d4af37]/40 shadow-lg shadow-[#1b3b2b]/15 transition-all transform active:scale-95"
               >
                 Next Step
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-4 h-4 text-[#d4af37]" />
               </button>
             ) : (
               <button
                 type="button"
                 onClick={handleFinalSubmit}
                 disabled={isSubmitting}
-                className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-black shadow-xl shadow-emerald-500/30 transition-all transform active:scale-95 disabled:opacity-50"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold bg-[#1b3b2b] hover:bg-[#142e21] dark:bg-[#204031] text-[#fbf9f5] border border-[#d4af37]/50 shadow-xl shadow-[#1b3b2b]/20 transition-all transform active:scale-95 disabled:opacity-50"
               >
-                <MessageSquare className="w-4 h-4 fill-current" />
-                {isSubmitting ? "Connecting..." : "Book via WhatsApp"}
+                <MessageSquare className="w-4 h-4 fill-current text-[#d4af37]" />
+                <span>{isSubmitting ? "Connecting..." : "Confirm Concierge Booking on WhatsApp"}</span>
               </button>
             )}
           </div>

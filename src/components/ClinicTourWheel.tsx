@@ -8,10 +8,13 @@ import {
   ShieldCheck,
   ChevronLeft,
   ChevronRight,
-  ArrowRight,
   MessageSquare,
+  Activity,
+  Flame,
   Award,
-  Maximize2,
+  Compass,
+  MapPin,
+  Stethoscope,
 } from "lucide-react";
 import { useBooking } from "@/context/BookingContext";
 
@@ -19,7 +22,9 @@ interface ClinicRoom {
   id: string;
   name: string;
   category: string;
+  tabLabel: string;
   image: string;
+  fallbackImage: string;
   description: string;
   features: string[];
   sterilityStandard: string;
@@ -28,93 +33,105 @@ interface ClinicRoom {
 
 const CLINIC_ROOMS: ClinicRoom[] = [
   {
-    id: "room-1",
-    name: "Dr. Begum's Private Consultation Desk",
-    category: "Consultation & Pulse Evaluation",
+    id: "consultation-pulse",
+    name: "Consultation & Pulse Evaluation",
+    category: "Diagnostic Suite",
+    tabLabel: "1. Consultation & Pulse",
     image: "/images/doctor-photos.jpg",
+    fallbackImage: "/images/dr-shasath-begum.jpg",
     description:
-      "A peaceful, confidential consultation chamber where Dr. M. Shasath Begum conducts in-depth pulse diagnostics, tongue inspection, and meridian constitutional evaluations in total privacy.",
+      "Private, sound-insulated consultation desk where Dr. M. Shasath Begum conducts comprehensive pulse assessments, meridian palpation, and detailed medical history evaluations.",
     features: [
-      "100% Private, 1-on-1 Female Doctor Setting",
-      "Traditional TCM Meridian & Anatomical Mapping",
-      "Comprehensive Lifestyle & Nutritional Prescriptions",
+      "Confidential 1-on-1 private doctor consultation",
+      "Traditional meridian diagnostic point evaluation",
+      "Customized holistic herbal & lifestyle roadmap",
     ],
-    sterilityStandard: "Confidential Medical Sanctuary",
+    sterilityStandard: "Sanitized clinical suite between every patient",
     bookingService: "General Wellness Consultation",
   },
   {
-    id: "room-2",
-    name: "Sanctuary Consultation & Treatment Interior",
-    category: "Tranquil Clinical Sanctuary",
+    id: "clinical-sanctuary",
+    name: "Tranquil Clinical Sanctuary",
+    category: "Sanctuary Interior",
+    tabLabel: "2. Clinical Sanctuary",
     image: "/images/clinic-sanctuary-interior.jpg",
+    fallbackImage: "/images/clinic-sanctuary.jpg",
     description:
-      "A serene and spotless clinical interior featuring consultation desk, therapy beds, and live natural greenery designed to induce instant calming of nervous tension.",
+      "Designed specifically for deep nervous system sedation. Calming ambient lighting, therapeutic warmth, and ergonomic padded medical plinths provide zero-gravity relaxation.",
     features: [
-      "Spotless Clinical Cleanliness & Zen Ambience",
-      "Ergonomic Memory-Foam Therapy Beds",
-      "Private Partitioned Consultation Environment",
+      "Tranquil organic aesthetic designed for stress decompression",
+      "Subtle 432Hz healing soundscape resonance",
+      "Ergonomic memory-foam clinical therapy plinths",
     ],
-    sterilityStandard: "Tranquil Clinical Sanctuary",
-    bookingService: "Acupuncture & Acupressure Session",
+    sterilityStandard: "HEPA air filtration & constant UV surface purification",
+    bookingService: "Stress, Depression & Anxiety Relief",
   },
   {
-    id: "room-3",
-    name: "Therapy & Acupressure Procedure Room",
-    category: "Precision Needle Decompression",
+    id: "needle-decompression",
+    name: "Precision Needle Decompression",
+    category: "Acupuncture Suite",
+    tabLabel: "3. Needle Decompression",
     image: "/images/clinic-treatment-room.jpg",
+    fallbackImage: "/images/clinic-1.jpg",
     description:
-      "Dedicated treatment suite equipped for acupuncture and acupressure therapy. Features sanitized therapy beds with sterile single-use disposable protective sheets.",
+      "Dedicated clinical acupuncture suite equipped for precision bio-electric stimulation, trigger point release, and sciatica nerve decompression under sterile conditions.",
     features: [
-      "Ultra-fine Sterile Japanese Single-Use Needles",
-      "Single-Use Hygienic Protective Bed Linens",
-      "Targeted Infrared Meridian Warming Therapy",
+      "Sterile single-use sealed Japanese micro-needles",
+      "Far-infrared soothing therapeutic heat lamps",
+      "Private partition curtains ensuring complete patient dignity",
     ],
-    sterilityStandard: "Single-Use Sterility Protocol",
+    sterilityStandard: "100% single-use disposable needle protocol & clinical autoclave",
     bookingService: "Acupuncture & Acupressure Session",
   },
   {
-    id: "room-4",
-    name: "Hijama Sterile Procedure Suite (@ Sunnah Point)",
-    category: "Clinical Prophetic Cupping",
+    id: "prophetic-cupping",
+    name: "Clinical Prophetic Cupping",
+    category: "Hijama @ Sunnah Point",
+    tabLabel: "4. Prophetic Cupping",
     image: "/images/cupping-therapy.jpg",
+    fallbackImage: "/images/clinic-sanctuary.jpg",
     description:
-      "A hospital-grade sanitized procedure room equipped for certified wet, dry, flash, and fire cupping. Every single vacuum cup and surgical micro-lancet is unboxed fresh before each patient.",
+      "A clinical-grade procedure suite adhering to hospital sterilization protocols for wet, dry, and fire cupping therapy. Complete privacy guaranteed for female patients.",
     features: [
-      "100% Single-Use Medical Vacuum Cups & Lancets",
-      "Authentic Sunnah Point Anatomy (Al-Kahil & Al-Akhda'ain)",
-      "Strict Biohazard Waste Disposal Compliance",
+      "100% single-use disposable vacuum cups and surgical lancets",
+      "Classical Sunnah Point anatomical mapping (Al-Kahil & Al-Akhda'ain)",
+      "Experienced female physician & attendants for complete privacy",
     ],
-    sterilityStandard: "Hospital-Grade Surgical Sterility",
+    sterilityStandard: "Hospital-grade sterile vacuum protocol & biomedical waste management",
     bookingService: "Hijama / Cupping Therapy (Wet/Dry/Fire)",
   },
   {
-    id: "room-5",
-    name: "Official Credentials & Accreditations Wall",
-    category: "Board Qualifications & Degrees",
+    id: "board-qualifications",
+    name: "Board Qualifications & Degrees",
+    category: "Clinical Licensures",
+    tabLabel: "5. Board Qualifications",
     image: "/images/doctor-certificates.jpg",
+    fallbackImage: "/images/Doctor certificates.jpg",
     description:
-      "Dr. M. Shasath Begum's framed board of qualifications, including M.D. in Acupuncture, Medicina Alternativa, Sujok, and Panchakarma certifications validating her 15+ years of clinical authority.",
+      "Displaying Dr. M. Shasath Begum's official M.D. in Acupuncture, Medicina Alternativa, and Sujok clinical certifications recognized across 15+ years of verified medical practice.",
     features: [
-      "M.D. in Clinical Acupuncture (Medicina Alternativa)",
-      "Certified Sujok Acupressure Association Master",
-      "Certified Panchakarma Detoxification Technician",
+      "M.D. in Clinical Acupuncture & Acupressure licensures",
+      "Certified Hijama Cupping practitioner accreditations",
+      "15+ years of documented healing records across South Bangalore",
     ],
-    sterilityStandard: "Officially Certified Practitioner",
+    sterilityStandard: "Certified medical protocols & practitioner registration",
     bookingService: "General Wellness Consultation",
   },
   {
-    id: "room-6",
-    name: "Clinic Street Entrance & Bilingual Signboard",
-    category: "J.P. Nagar Landmark Signage",
+    id: "landmark-signage",
+    name: "J.P. Nagar Landmark Signage",
+    category: "Clinic Entrance & Street Sign",
+    tabLabel: "6. Landmark Signage",
     image: "/images/clinic-board-outside.jpg",
+    fallbackImage: "/images/Clinic board outside.jpg",
     description:
-      "Our outdoor green and white signage in Kannada & English ('ವೆಲ್ನೆಸ್ ಥೆರಪಿ ಸೆಂಟರ್ / WELLNESS THERAPY CENTRE'), making it easy to identify the clinic building when arriving at Gangadhar Nagar, J.P. Nagar Bangalore.",
+      "Outdoor landmark entrance on Gangadhar Nagar 1st Main Road, J.P. Nagar. Easily recognizable green & white bilingual signage in Kannada and English welcoming patients.",
     features: [
-      "Prominent Bilingual Kannada & English Sign Board",
-      "No. 11, 1st Main, Gangadhar Nagar Street Entrance",
-      "Convenient Patient Drop-Off & Vehicle Parking",
+      "Conveniently located on Gangadhar Nagar Main Road",
+      "Dedicated patient parking directly in front of the clinic",
+      "Easily accessible from Kanakapura Road & Outer Ring Road",
     ],
-    sterilityStandard: "Easily Accessible Clinic Entrance",
+    sterilityStandard: "Spotless clinic entrance & step-free patient accessibility",
     bookingService: "General Wellness Consultation",
   },
 ];
@@ -122,6 +139,7 @@ const CLINIC_ROOMS: ClinicRoom[] = [
 export default function ClinicTourWheel() {
   const { openBooking } = useBooking();
   const [activeIdx, setActiveIdx] = useState(0);
+  const [failedImages, setFailedImages] = useState<Record<string, boolean>>({});
 
   const current = CLINIC_ROOMS[activeIdx];
 
@@ -133,122 +151,137 @@ export default function ClinicTourWheel() {
     setActiveIdx((prev) => (prev - 1 + CLINIC_ROOMS.length) % CLINIC_ROOMS.length);
   };
 
+  const handleImageError = (id: string) => {
+    setFailedImages((prev) => ({ ...prev, [id]: true }));
+  };
+
   return (
-    <section className="py-24 bg-white dark:bg-[#0a0a0d] relative overflow-hidden transition-colors duration-300">
+    <section className="py-24 bg-[#fbf9f5] dark:bg-[#121110] relative overflow-hidden transition-colors duration-300">
       {/* Background radial highlight */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-emerald-500/5 blur-[160px] pointer-events-none rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#1b3b2b]/6 dark:bg-[#34d399]/6 blur-[160px] pointer-events-none rounded-full" />
+      <div className="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-[#d4af37]/6 blur-[140px] pointer-events-none rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/70 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-bold mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>Interactive 3D Virtual Clinic Tour</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f4efe4] dark:bg-[#1c1a17] border border-[#d4af37]/35 dark:border-[#d4af37]/25 text-[#1b3b2b] dark:text-[#f3d987] text-xs font-semibold mb-3 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" />
+            <span>Interactive Virtual Sanctuary Tour • 6 Clinical Suites</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight">
+          <h2 className="font-editorial text-3xl sm:text-5xl font-semibold text-[#1c1b18] dark:text-[#fbf9f5] tracking-tight">
             Step Inside Our{" "}
-            <span className="text-emerald-600 dark:emerald-glow-text">Bangalore Healing Sanctuary</span>
+            <span className="font-editorial-italic sage-glow-text">Bangalore Healing Sanctuary</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-neutral-600 dark:text-gray-400 mt-4 leading-relaxed">
+          <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed font-light">
             Tour the sterile, luxurious clinical suites of Wellness Therapy Centre in J.P. Nagar,
-            custom-crafted for serene relaxation and painless holistic healing.
+            custom-crafted for serene relaxation, diagnostic precision, and painless holistic healing.
           </p>
         </div>
 
-        {/* Room Navigation Pill Selector */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
-          {CLINIC_ROOMS.map((room, idx) => (
-            <button
-              key={room.id}
-              type="button"
-              onClick={() => setActiveIdx(idx)}
-              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                activeIdx === idx
-                  ? "bg-emerald-600 text-white dark:bg-emerald-500 dark:text-black shadow-lg shadow-emerald-500/25"
-                  : "bg-neutral-100 hover:bg-neutral-200 text-neutral-700 dark:bg-[#14141c] dark:text-gray-400 dark:hover:text-white dark:hover:bg-[#1a1a24] border border-neutral-200 dark:border-white/[0.06]"
-              }`}
-            >
-              {room.category}
-            </button>
-          ))}
+        {/* 6 Room Navigation Pill Selector */}
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-10">
+          {CLINIC_ROOMS.map((room, idx) => {
+            const isActive = activeIdx === idx;
+            return (
+              <button
+                key={room.id}
+                type="button"
+                onClick={() => setActiveIdx(idx)}
+                className={`px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-2xl text-xs font-semibold transition-all flex items-center gap-2 ${
+                  isActive
+                    ? "bg-[#1b3b2b] text-[#fbf9f5] dark:bg-[#1f3f2f] border border-[#d4af37]/50 shadow-lg shadow-[#1b3b2b]/15 ring-1 ring-[#d4af37]/40"
+                    : "bg-white/90 hover:bg-[#f5f1e8] text-neutral-700 dark:bg-[#181715] dark:text-neutral-300 dark:hover:text-white dark:hover:bg-[#201e1b] border border-[#1b3b2b]/10 dark:border-white/[0.06]"
+                }`}
+              >
+                <span
+                  className={`w-1.5 h-1.5 rounded-full ${
+                    isActive ? "bg-[#d4af37]" : "bg-neutral-400 dark:bg-neutral-600"
+                  }`}
+                />
+                <span>{room.tabLabel}</span>
+              </button>
+            );
+          })}
         </div>
 
         {/* Main Interactive Room Showcase Card */}
-        <div className="relative bg-neutral-50/80 dark:bg-[#111118] border border-neutral-200 dark:border-emerald-500/30 rounded-3xl overflow-hidden shadow-xl dark:shadow-2xl">
+        <div className="relative bg-white dark:bg-[#181715] border border-[#d4af37]/35 dark:border-[#d4af37]/25 rounded-3xl overflow-hidden shadow-2xl shadow-[#1b3b2b]/10 dark:shadow-black/75">
           <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
-            {/* Left Photo View */}
-            <div className="lg:col-span-7 relative min-h-[350px] sm:min-h-[460px]">
+            {/* Left Photo View with Guaranteed Height & Fallback */}
+            <div className="lg:col-span-7 relative min-h-[340px] sm:min-h-[460px] lg:min-h-[520px] w-full overflow-hidden bg-[#f4efe4] dark:bg-[#121110]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={current.id}
-                  initial={{ opacity: 0, scale: 0.96 }}
+                  initial={{ opacity: 0, scale: 0.98 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.96 }}
-                  transition={{ duration: 0.4 }}
-                  className="absolute inset-0"
+                  exit={{ opacity: 0, scale: 0.98 }}
+                  transition={{ duration: 0.35, ease: "easeOut" }}
+                  className="absolute inset-0 w-full h-full"
                 >
                   <Image
-                    src={current.image}
+                    src={failedImages[current.id] ? current.fallbackImage : current.image}
                     alt={current.name}
                     fill
                     sizes="(max-width: 1024px) 100vw, 60vw"
                     className="object-cover"
+                    priority={activeIdx === 0}
+                    onError={() => handleImageError(current.id)}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-50 dark:from-[#111118] via-transparent to-black/30 lg:bg-gradient-to-r lg:from-transparent lg:to-neutral-50 dark:lg:to-[#111118]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-[#181715] via-transparent to-black/30 lg:bg-gradient-to-r lg:from-transparent lg:to-white dark:lg:to-[#181715]" />
 
                   {/* Room Index Indicator */}
-                  <div className="absolute top-4 left-4 glass-panel px-3 py-1.5 rounded-xl text-xs font-bold text-neutral-900 dark:text-white flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                  <div className="absolute top-4 left-4 glass-panel px-3.5 py-2 rounded-2xl text-xs font-semibold text-[#1c1b18] dark:text-white flex items-center gap-2 border border-[#d4af37]/35 shadow-md">
+                    <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-ping" />
                     <span>
-                      Space {activeIdx + 1} of {CLINIC_ROOMS.length}
+                      Sanctuary Space {activeIdx + 1} of {CLINIC_ROOMS.length}
                     </span>
                   </div>
 
                   {/* Sterility Pill */}
-                  <div className="absolute bottom-4 left-4 bg-emerald-900/90 dark:bg-emerald-950/80 backdrop-blur-md border border-emerald-400/40 dark:border-emerald-500/40 px-3.5 py-1.5 rounded-xl text-xs font-bold text-emerald-200 dark:text-emerald-300 flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                    <span>{current.sterilityStandard}</span>
+                  <div className="absolute bottom-4 left-4 right-4 sm:right-auto bg-[#1b3b2b]/95 dark:bg-[#121110]/95 backdrop-blur-md border border-[#d4af37]/45 px-3.5 py-2 rounded-2xl text-xs font-semibold text-[#fbf9f5] flex items-center gap-2 shadow-lg">
+                    <ShieldCheck className="w-4 h-4 text-[#d4af37] shrink-0" />
+                    <span className="truncate">{current.sterilityStandard}</span>
                   </div>
                 </motion.div>
               </AnimatePresence>
             </div>
 
             {/* Right Information & Booking Panel */}
-            <div className="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between space-y-6">
+            <div className="lg:col-span-5 p-7 sm:p-9 flex flex-col justify-between space-y-6 bg-[#fcfbf9] dark:bg-[#161513]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={current.id}
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 0, x: 15 }}
                   animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.3 }}
+                  exit={{ opacity: 0, x: -15 }}
+                  transition={{ duration: 0.25 }}
                   className="space-y-5"
                 >
                   <div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
-                      {current.category}
-                    </span>
-                    <h3 className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white mt-1 leading-snug">
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#f4efe4] dark:bg-[#1c1a17] border border-[#d4af37]/30 text-[10px] font-bold uppercase tracking-wider text-[#855f10] dark:text-[#f3d987] mb-2">
+                      <span>{current.category}</span>
+                    </div>
+                    <h3 className="font-editorial text-2xl sm:text-3xl font-semibold text-[#1c1b18] dark:text-white leading-snug">
                       {current.name}
                     </h3>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-gray-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed font-light">
                     {current.description}
                   </p>
 
                   <div className="space-y-2.5 pt-1">
-                    <span className="text-xs font-bold uppercase tracking-wider text-neutral-500 dark:text-gray-400 block">
+                    <span className="text-xs font-bold uppercase tracking-wider text-neutral-500 dark:text-neutral-400 block">
                       Suite Features & Amenities:
                     </span>
                     {current.features.map((f, i) => (
                       <div
                         key={i}
-                        className="flex items-start gap-2.5 text-xs text-neutral-700 dark:text-gray-300"
+                        className="flex items-start gap-2.5 text-xs text-neutral-700 dark:text-neutral-300"
                       >
-                        <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                        <ShieldCheck className="w-4 h-4 text-[#d4af37] shrink-0 mt-0.5" />
                         <span>{f}</span>
                       </div>
                     ))}
@@ -257,14 +290,14 @@ export default function ClinicTourWheel() {
               </AnimatePresence>
 
               {/* Action Buttons & Carousel Arrows */}
-              <div className="pt-6 border-t border-neutral-200 dark:border-white/[0.08] flex items-center justify-between gap-3">
+              <div className="pt-6 border-t border-[#d4af37]/20 flex items-center justify-between gap-3">
                 <button
                   type="button"
                   onClick={() => openBooking(current.bookingService)}
-                  className="flex-1 py-3 px-4 rounded-xl text-xs font-bold bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2 transition active:scale-95"
+                  className="flex-1 py-3.5 px-4 rounded-xl text-xs font-semibold bg-[#1b3b2b] hover:bg-[#234b37] text-[#fbf9f5] border border-[#d4af37]/45 shadow-lg shadow-[#1b3b2b]/15 flex items-center justify-center gap-2 transition active:scale-95"
                 >
-                  <MessageSquare className="w-3.5 h-3.5 fill-current" />
-                  <span>Book This Room&apos;s Treatment</span>
+                  <MessageSquare className="w-3.5 h-3.5 text-[#d4af37]" />
+                  <span>Reserve Treatment in This Suite</span>
                 </button>
 
                 {/* Arrow Controls */}
@@ -272,20 +305,37 @@ export default function ClinicTourWheel() {
                   <button
                     type="button"
                     onClick={handlePrev}
-                    aria-label="Previous clinic room"
-                    className="p-2.5 rounded-xl bg-neutral-200/70 hover:bg-neutral-200 text-neutral-800 dark:bg-white/[0.06] dark:hover:bg-white/[0.12] dark:text-white transition"
+                    aria-label="Previous clinic space"
+                    className="p-2.5 rounded-xl bg-white hover:bg-[#f5f1e8] text-neutral-800 dark:bg-white/[0.06] dark:hover:bg-white/[0.12] dark:text-white border border-[#d4af37]/25 transition"
                   >
-                    <ChevronLeft className="w-4 h-4" />
+                    <ChevronLeft className="w-4 h-4 text-[#d4af37]" />
                   </button>
                   <button
                     type="button"
                     onClick={handleNext}
-                    aria-label="Next clinic room"
-                    className="p-2.5 rounded-xl bg-neutral-200/70 hover:bg-neutral-200 text-neutral-800 dark:bg-white/[0.06] dark:hover:bg-white/[0.12] dark:text-white transition"
+                    aria-label="Next clinic space"
+                    className="p-2.5 rounded-xl bg-white hover:bg-[#f5f1e8] text-neutral-800 dark:bg-white/[0.06] dark:hover:bg-white/[0.12] dark:text-white border border-[#d4af37]/25 transition"
                   >
-                    <ChevronRight className="w-4 h-4" />
+                    <ChevronRight className="w-4 h-4 text-[#d4af37]" />
                   </button>
                 </div>
+              </div>
+
+              {/* 6 Thumbnail Dots */}
+              <div className="flex items-center justify-center gap-2 pt-2">
+                {CLINIC_ROOMS.map((_, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setActiveIdx(idx)}
+                    aria-label={`Jump to tour item ${idx + 1}`}
+                    className={`h-1.5 rounded-full transition-all ${
+                      activeIdx === idx
+                        ? "w-8 bg-[#1b3b2b] dark:bg-[#34d399]"
+                        : "w-2 bg-neutral-300 dark:bg-neutral-700 hover:bg-[#d4af37]"
+                    }`}
+                  />
+                ))}
               </div>
             </div>
           </div>
