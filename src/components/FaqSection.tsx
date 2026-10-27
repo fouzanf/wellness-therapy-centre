@@ -34,7 +34,7 @@ const FAQS: FAQItem[] = [
     category: "Women's Health",
     question: "Do you have dedicated privacy and specialized treatments for women?",
     answer:
-      "Absolutely. Wellness Therapy Centre is led by Dr. M. Shasath Begum, M.D(Acu.), providing female patients with complete privacy, comfort, and dignified holistic care. We specialize in non-invasive management of PCOD/PCOS, menstrual irregularities, hormonal acne, pelvic heaviness, and fertility optimization through gentle meridian balancing.",
+      "Absolutely. Wellness Therapy Centre is led by Dr. M. Shasath Begum, M.D(Acu.), PhD, providing female patients with complete privacy, comfort, and dignified holistic care. We specialize in non-invasive management of PCOD/PCOS, menstrual irregularities, hormonal acne, pelvic heaviness, and fertility optimization through gentle meridian balancing.",
   },
   {
     category: "Preparation",
@@ -46,7 +46,7 @@ const FAQS: FAQItem[] = [
     category: "Booking",
     question: "Do I need a prior appointment or do you accept walk-ins?",
     answer:
-      "While walk-ins are welcomed subject to availability, we strongly encourage booking your appointment slot in advance via our WhatsApp booking engine or by calling +91 9740495548. This guarantees zero waiting time and allows Dr. Shasath Begum to prepare a dedicated treatment room for your arrival.",
+      "While walk-ins are welcomed subject to availability, we strongly encourage booking your appointment slot in advance via our WhatsApp booking engine or by calling +91 9740495548. This guarantees zero waiting time and allows Dr. Shasath Begum, PhD to prepare a dedicated treatment room for your arrival.",
   },
 ];
 
@@ -123,7 +123,7 @@ export default function FaqSection() {
           })}
         </div>
 
-        {/* Bottom Concierge Card */}
+        {/* Bottom Booking Card */}
         <div className="mt-12 text-center p-7 rounded-3xl bg-[#f8f5ee] dark:bg-[#181715] border border-[#d4af37]/25 shadow-sm dark:shadow-xl">
           <p className="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 mb-4 font-light">
             Have a specific clinical or personal inquiry regarding your condition?
@@ -134,7 +134,7 @@ export default function FaqSection() {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-semibold bg-[#1b3b2b] hover:bg-[#234b37] text-[#fbf9f5] border border-[#d4af37]/40 shadow-lg shadow-[#1b3b2b]/15 transition active:scale-95"
           >
             <MessageSquare className="w-4 h-4 text-[#d4af37]" />
-            <span>Inquire Directly with Concierge Desk</span>
+            <span>Book Appointment</span>
           </button>
         </div>
       </div>

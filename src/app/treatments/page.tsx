@@ -116,7 +116,7 @@ const TREATMENTS_LIST: DetailedTreatment[] = [
       "Pre-conception Fertility Optimization",
     ],
     protocolSteps: [
-      "1. Private, confidential female-to-female consultation with Dr. Shasath Begum",
+      "1. Private, confidential female-to-female consultation with Dr. Shasath Begum, PhD",
       "2. Identification of Kidney, Spleen & Liver Qi imbalances",
       "3. Non-invasive needle stimulation on abdominal and lower extremity points (SP6, CV4, KI3)",
       "4. Lifestyle and holistic natural nutrition coaching",
@@ -196,7 +196,7 @@ export default function TreatmentsPage() {
           </h1>
           <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed font-light">
             Discover our spectrum of natural therapies administered personally by{" "}
-            <strong className="text-[#1c1b18] dark:text-white font-semibold">Dr. M. Shasath Begum, M.D(Acu.)</strong> in J.P.
+            <strong className="text-[#1c1b18] dark:text-white font-semibold">Dr. M. Shasath Begum, M.D(Acu.), PhD</strong> in J.P.
             Nagar, Bangalore. Select any category to view treatment protocols.
           </p>
         </div>
@@ -297,7 +297,7 @@ export default function TreatmentsPage() {
                 {/* Card CTA */}
                 <div className="pt-4 border-t border-[#1b3b2b]/10 dark:border-white/[0.08] flex items-center justify-between">
                   <span className="text-xs text-neutral-500 dark:text-neutral-400">
-                    Consultation with Dr. Shasath Begum
+                    Consultation with Dr. Shasath Begum, PhD
                   </span>
                   <button
                     type="button"
@@ -305,7 +305,7 @@ export default function TreatmentsPage() {
                     className="px-5 py-2.5 rounded-xl text-xs font-semibold bg-[#1b3b2b] hover:bg-[#234b37] text-[#fbf9f5] border border-[#d4af37]/40 shadow-md shadow-[#1b3b2b]/15 flex items-center gap-2 transition active:scale-95"
                   >
                     <MessageSquare className="w-3.5 h-3.5 text-[#d4af37]" />
-                    <span>Book on WhatsApp</span>
+                    <span>Book Appointment</span>
                   </button>
                 </div>
               </motion.div>

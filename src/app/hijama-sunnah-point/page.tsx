@@ -42,7 +42,7 @@ export default function HijamaSunnahPage() {
           </h1>
 
           <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed font-light">
-            Conducted by <strong className="text-[#1c1b18] dark:text-white font-semibold">Dr. M. Shasath Begum, M.D(Acu.)</strong> in
+            Conducted by <strong className="text-[#1c1b18] dark:text-white font-semibold">Dr. M. Shasath Begum, M.D(Acu.), PhD</strong> in
             J.P. Nagar, Bangalore. Ensuring complete hygiene with 100% single-use disposable vacuum
             cups, gentle micro-incisions, and authentic meridian mapping.
           </p>
@@ -109,7 +109,7 @@ export default function HijamaSunnahPage() {
               The Primary <span className="font-editorial-italic champagne-glow-text">Sunnah Points</span> Explained
             </h3>
             <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-2 font-light">
-              Dr. M. Shasath Begum meticulously maps these anatomical landmarks for maximum
+              Dr. M. Shasath Begum, PhD meticulously maps these anatomical landmarks for maximum
               therapeutic efficacy.
             </p>
           </div>
@@ -228,7 +228,7 @@ export default function HijamaSunnahPage() {
           </h3>
           <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto font-light">
             Experience the revitalizing therapeutic power of authentic prophetic cupping with Dr.
-            M. Shasath Begum at J.P. Nagar, Bangalore.
+            M. Shasath Begum, PhD at J.P. Nagar, Bangalore.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <button
@@ -239,7 +239,7 @@ export default function HijamaSunnahPage() {
               className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-semibold text-xs bg-[#1b3b2b] hover:bg-[#234b37] text-[#fbf9f5] border border-[#d4af37]/40 shadow-lg shadow-[#1b3b2b]/15 flex items-center justify-center gap-2 transition active:scale-95"
             >
               <MessageSquare className="w-4 h-4 text-[#d4af37]" />
-              <span>Book Hijama via Concierge Desk (+91 9740495548)</span>
+              <span>Book Appointment</span>
             </button>
           </div>
         </div>

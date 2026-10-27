@@ -135,7 +135,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Concierge Desk & Medical Sanctuary Modal */
+/* Appointment Desk & Medical Sanctuary Modal */
 .glass-modal {
   background: rgba(251, 249, 245, 0.98);
   backdrop-filter: blur(28px);
@@ -225,6 +225,15 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #c5a059;
+}
+
+/* Hide scrollbar for clean horizontal tickers & carousels */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
 
 /* Soft Breathing Pulse for Doctor Status */

@@ -138,7 +138,7 @@ export default function SymptomChecker() {
             <span className="font-editorial-italic sage-glow-text">Targeted Healing Protocol</span>
           </h2>
           <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-3 font-light">
-            Select your primary health concern below to explore Dr. M. Shasath Begum&apos;s
+            Select your primary health concern below to explore Dr. M. Shasath Begum, PhD&apos;s
             clinical meridian protocol and expected recovery timeline.
           </p>
         </div>
@@ -249,7 +249,7 @@ export default function SymptomChecker() {
                     className="px-5 py-2.5 rounded-xl text-xs font-semibold bg-[#1b3b2b] hover:bg-[#234b37] text-[#fbf9f5] border border-[#d4af37]/40 shadow-md shadow-[#1b3b2b]/15 flex items-center gap-2 transition active:scale-95"
                   >
                     <MessageSquare className="w-3.5 h-3.5 text-[#d4af37]" />
-                    <span>Book Clinical Consultation</span>
+                    <span>Book Appointment</span>
                   </button>
                 </div>
               </motion.div>

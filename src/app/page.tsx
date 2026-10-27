@@ -146,13 +146,13 @@ export default function HomePage() {
           <h2 className="font-editorial text-3xl sm:text-5xl font-semibold text-[#1c1b18] dark:text-[#fbf9f5] tracking-tight leading-tight">
             {language === "kn" ? (
               <>
-                ಡಾ. ಎಂ. ಶಾಸತ್ ಬೇಗಂ ಅವರೊಂದಿಗೆ{" "}
+                ಡಾ. ಎಂ. ಶಾಸತ್ ಬೇಗಂ, PhD ಅವರೊಂದಿಗೆ{" "}
                 <span className="font-editorial-italic sage-glow-text">ನೈಸರ್ಗಿಕ ಆರೋಗ್ಯವನ್ನು ಮರಳಿ ಪಡೆಯಿರಿ</span>
               </>
             ) : (
               <>
                 Ready to Experience Natural Relief with{" "}
-                <span className="font-editorial-italic sage-glow-text">Dr. M. Shasath Begum?</span>
+                <span className="font-editorial-italic sage-glow-text">Dr. M. Shasath Begum, PhD?</span>
               </>
             )}
           </h2>
@@ -172,8 +172,8 @@ export default function HomePage() {
               <MessageSquare className="w-4 h-4 fill-current text-[#d4af37]" />
               <span>
                 {language === "kn"
-                  ? "ವಾಟ್ಸಾಪ್‌ನಲ್ಲಿ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಬುಕ್ ಮಾಡಿ"
-                  : "Book Consultation on WhatsApp"}
+                  ? "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಕಾಯ್ದಿರಿಸಿ"
+                  : "Book Appointment"}
               </span>
               <ArrowRight className="w-4 h-4 text-[#d4af37]" />
             </button>

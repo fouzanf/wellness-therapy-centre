@@ -57,7 +57,7 @@ const TREATMENTS_DATA: TreatmentCard[] = [
     idealFor: ["Full Body Detox", "Lethargy & Fatigue", "High Blood Stagnation", "Back Pain"],
     keyBenefits: [
       "100% single-use disposable vacuum cups and surgical blades",
-      "Personally administered by certified physician Dr. M. Shasath Begum",
+      "Personally administered by certified physician Dr. M. Shasath Begum, M.D(Acu.), PhD",
       "Deep systemic tissue decompression and immune defense boost",
     ],
     icon: Flame,
@@ -168,7 +168,7 @@ export default function TreatmentsSection() {
           </h2>
           <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed">
             Every session at Wellness Therapy Centre is personally overseen by{" "}
-            <strong className="text-[#1c1b18] dark:text-white">Dr. M. Shasath Begum, M.D(Acu.)</strong>, adhering to
+            <strong className="text-[#1c1b18] dark:text-white">Dr. M. Shasath Begum, M.D(Acu.), PhD</strong>, adhering to
             strict clinical sterilization standards and classical meridian wisdom.
           </p>
         </div>
@@ -243,7 +243,7 @@ export default function TreatmentsSection() {
                     className="w-full py-3 px-4 rounded-xl text-xs font-semibold bg-[#1b3b2b] hover:bg-[#142e21] dark:bg-[#1f3f2f] dark:hover:bg-[#284f3c] text-[#fbf9f5] border border-[#d4af37]/35 flex items-center justify-center gap-2 transition-all duration-200 shadow-sm"
                   >
                     <MessageSquare className="w-3.5 h-3.5 fill-current text-[#d4af37]" />
-                    <span>Reserve Session via WhatsApp</span>
+                    <span>Book Appointment</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#d4af37] group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
@@ -263,7 +263,7 @@ export default function TreatmentsSection() {
                 Not sure which clinical protocol suits your condition?
               </h4>
               <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-0.5">
-                Speak directly with Dr. M. Shasath Begum for a personal diagnostic evaluation.
+                Speak directly with Dr. M. Shasath Begum, PhD for a personal diagnostic evaluation.
               </p>
             </div>
           </div>

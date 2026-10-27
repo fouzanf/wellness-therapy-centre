@@ -48,7 +48,7 @@ const CASE_STUDIES: CaseStudy[] = [
     conditionTitle: "Severe L4-L5 Lumbar Disc Herniation & Sciatic Nerve Radiating Pain",
     durationSuffered: "8 Months of Agonizing Chronic Pain",
     story:
-      "I was advised urgent spinal surgery after 8 months of excruciating shooting pain down my left leg. Even walking 50 meters felt impossible. Dr. Shasath Begum diagnosed severe Bladder/Gallbladder meridian stagnation. She administered precision acupuncture and targeted cupping on Huantiao and Weizhong points. By the 4th session, my leg numbness and shooting pain had decreased by 90%. Today, I am back to work without surgery or painkillers.",
+      "I was advised urgent spinal surgery after 8 months of excruciating shooting pain down my left leg. Even walking 50 meters felt impossible. Dr. Shasath Begum, PhD diagnosed severe Bladder/Gallbladder meridian stagnation. She administered precision acupuncture and targeted cupping on Huantiao and Weizhong points. By the 4th session, my leg numbness and shooting pain had decreased by 90%. Today, I am back to work without surgery or painkillers.",
     timeline: [
       { session: "Session 1", milestone: "Immediate reduction in acute lumbar muscle spasm", reliefPercentage: "35% Relief" },
       { session: "Session 3", milestone: "Radiating pain retracted from ankle back up to glute", reliefPercentage: "65% Relief" },
@@ -150,7 +150,7 @@ export default function PatientTimelineCarousel() {
 
           <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed">
             Examine step-by-step clinical progression milestones from real Bangalore residents
-            treated by Dr. M. Shasath Begum at Wellness Therapy Centre.
+            treated by Dr. M. Shasath Begum, M.D(Acu.), PhD at Wellness Therapy Centre.
           </p>
         </div>
 
@@ -273,7 +273,7 @@ export default function PatientTimelineCarousel() {
                   className="px-5 py-2.5 rounded-xl text-xs font-semibold bg-[#1b3b2b] hover:bg-[#142e21] dark:bg-[#1f3f2f] text-[#fbf9f5] border border-[#d4af37]/35 flex items-center gap-1.5 transition active:scale-95 shadow-sm"
                 >
                   <MessageSquare className="w-3.5 h-3.5 fill-current text-[#d4af37]" />
-                  <span>Consult on WhatsApp</span>
+                  <span>Book Appointment</span>
                   <ArrowRight className="w-3.5 h-3.5 text-[#d4af37]" />
                 </button>
               </div>

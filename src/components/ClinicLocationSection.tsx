@@ -39,7 +39,7 @@ export default function ClinicLocationSection() {
           </h2>
           <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed font-light">
             Conveniently situated in Gangadhar Nagar, J.P. Nagar Bangalore. Offering tranquil,
-            private treatment suites equipped with medical-grade sterilization and concierge patient care.
+            private treatment suites equipped with medical-grade sterilization and dedicated patient care.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export default function ClinicLocationSection() {
               {/* Contact Info */}
               <div>
                 <span className="text-xs font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider block mb-2">
-                  Direct Line & Concierge WhatsApp:
+                  Direct Line & WhatsApp Appointments:
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <a
@@ -116,7 +116,7 @@ export default function ClinicLocationSection() {
                   >
                     <MessageSquare className="w-4 h-4 text-[#d4af37]" />
                     <div>
-                      <div className="text-[10px] text-[#f3d987]">Private Concierge</div>
+                      <div className="text-[10px] text-[#f3d987]">Appointment Desk</div>
                       <div className="font-bold">Book Slot</div>
                     </div>
                   </button>
@@ -203,7 +203,7 @@ export default function ClinicLocationSection() {
                   </div>
                   <div className="text-left">
                     <h4 className="font-editorial font-semibold text-[#1c1b18] dark:text-white text-xs">
-                      Wellness Therapy Centre (Dr. M. Shasath Begum)
+                      Wellness Therapy Centre (Dr. M. Shasath Begum, M.D(Acu.), PhD)
                     </h4>
                     <a
                       href={googleMapsUrl}
@@ -231,7 +231,7 @@ export default function ClinicLocationSection() {
               </div>
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4 text-[#d4af37] shrink-0" />
-                <span>Concierge WhatsApp Bookings</span>
+                <span>Direct Appointment Bookings</span>
               </div>
             </div>
           </div>

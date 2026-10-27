@@ -49,7 +49,7 @@ export function MobileStickyBar({ onOpenBooking, isBookingOpen: propIsBookingOpe
           className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-xs font-bold bg-[#1b3b2b] hover:bg-[#142e21] dark:bg-[#1f3f2f] text-[#fbf9f5] border border-[#d4af37]/45 shadow-lg shadow-[#1b3b2b]/20 active:scale-95 transition"
         >
           <MessageSquare className="w-3.5 h-3.5 fill-current text-[#d4af37]" />
-          <span>Concierge WhatsApp</span>
+          <span>Book Appointment</span>
         </button>
       </div>
     </div>

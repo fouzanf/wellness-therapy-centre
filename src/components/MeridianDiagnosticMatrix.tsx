@@ -228,8 +228,8 @@ export default function MeridianDiagnosticMatrix() {
 
           <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed">
             {language === "kn"
-              ? "ನಿಮ್ಮ ಆರೋಗ್ಯ ಸಮಸ್ಯೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ ಮತ್ತು ಡಾ. ಶಾಸತ್ ಬೇಗಂ ಅವರ ನಿಖರವಾದ ಆಕ್ಯುಪಾಯಿಂಟ್ ಚಿಕಿತ್ಸಾ ವಿಧಾನವನ್ನು ವೀಕ್ಷಿಸಿ."
-              : "Select your health condition below to visualize the exact TCM energy channels, acupoint coordinates, and clinical recovery protocol targeted by Dr. M. Shasath Begum."}
+              ? "ನಿಮ್ಮ ಆರೋಗ್ಯ ಸಮಸ್ಯೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ ಮತ್ತು ಡಾ. ಶಾಸತ್ ಬೇಗಂ, PhD ಅವರ ನಿಖರವಾದ ಆಕ್ಯುಪಾಯಿಂಟ್ ಚಿಕಿತ್ಸಾ ವಿಧಾನವನ್ನು ವೀಕ್ಷಿಸಿ."
+              : "Select your health condition below to visualize the exact TCM energy channels, acupoint coordinates, and clinical recovery protocol targeted by Dr. M. Shasath Begum, PhD."}
           </p>
         </div>
 
@@ -434,7 +434,7 @@ export default function MeridianDiagnosticMatrix() {
               {/* Bottom Action CTA */}
               <div className="pt-6 mt-6 border-t border-[#d4af37]/20 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="text-xs text-neutral-500 dark:text-neutral-400 text-center sm:text-left">
-                  Treated personally by <strong className="text-[#1c1b18] dark:text-white">Dr. M. Shasath Begum, M.D(Acu.)</strong>
+                  Treated personally by <strong className="text-[#1c1b18] dark:text-white">Dr. M. Shasath Begum, M.D(Acu.), PhD</strong>
                 </div>
 
                 <button

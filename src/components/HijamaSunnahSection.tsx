@@ -102,7 +102,7 @@ export default function HijamaSunnahSection() {
             <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed font-normal">
               At Wellness Therapy Centre in J.P. Nagar, Hijama is conducted under strict
               medical hygiene standards led by{" "}
-              <strong className="text-[#1c1b18] dark:text-white">Dr. M. Shasath Begum, M.D(Acu.)</strong>. We
+              <strong className="text-[#1c1b18] dark:text-white">Dr. M. Shasath Begum, M.D(Acu.), PhD</strong>. We
               combine prophetic Sunnah anatomy with modern physiological vacuum science to
               drain toxic metabolic stagnations and stimulate deep immune vitality.
             </p>

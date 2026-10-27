@@ -163,7 +163,7 @@ export default function HeroSection() {
               <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <Image
                   src="/images/doctor-photos.jpg"
-                  alt="Dr. M. Shasath Begum, M.D(Acu.) senior consultation at Wellness Therapy Centre J.P. Nagar Bangalore"
+                  alt="Dr. M. Shasath Begum, M.D(Acu.), PhD senior consultation at Wellness Therapy Centre J.P. Nagar Bangalore"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                   priority
@@ -176,10 +176,10 @@ export default function HeroSection() {
                   <span className="w-2.5 h-2.5 rounded-full bg-[#34d399] animate-pulse-subtle shadow-sm" />
                   <div>
                     <div className="font-editorial text-xs font-semibold text-[#1c1b18] dark:text-white leading-tight">
-                      Dr. M. Shasath Begum
+                      Dr. M. Shasath Begum, PhD
                     </div>
                     <div className="text-[10px] text-[#1b3b2b] dark:text-[#34d399] font-semibold tracking-wide">
-                      M.D(Acu.) • Senior Physician
+                      M.D(Acu.), PhD • Senior Physician
                     </div>
                   </div>
                 </div>

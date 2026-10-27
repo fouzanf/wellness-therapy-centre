@@ -21,7 +21,7 @@ const TESTIMONIALS: Testimonial[] = [
     treatment: "Chronic Pain & Acupressure",
     condition: "Severe L4-L5 Sciatica & Disc Bulge",
     quote:
-      "I was advised spinal surgery by an orthopedic surgeon after 8 months of agony. A family friend recommended Dr. Shasath Begum. Within just 4 sessions of acupuncture and targeted cupping, my shooting leg pain reduced by 90%. I am now back to my daily morning walks without painkillers!",
+      "I was advised spinal surgery by an orthopedic surgeon after 8 months of agony. A family friend recommended Dr. Shasath Begum, PhD. Within just 4 sessions of acupuncture and targeted cupping, my shooting leg pain reduced by 90%. I am now back to my daily morning walks without painkillers!",
     reliefMetric: "90% Pain Relief in 4 Sessions",
     rating: 5,
   },
@@ -31,7 +31,7 @@ const TESTIMONIALS: Testimonial[] = [
     treatment: "Women's Health & PCOD Protocol",
     condition: "PCOD & Chronic Fatigue",
     quote:
-      "As a practicing dentist, my stress levels were high and my menstrual cycles were irregular for over a year and a half. Dr. Shasath’s holistic acupuncture sessions not only restored my natural cycle within two months, but also cleared my recurring brain fog and skin breakouts.",
+      "As a practicing dentist, my stress levels were high and my menstrual cycles were irregular for over a year and a half. Dr. Shasath Begum, PhD’s holistic acupuncture sessions not only restored my natural cycle within two months, but also cleared my recurring brain fog and skin breakouts.",
     reliefMetric: "Natural Cycle Restored in 60 Days",
     rating: 5,
   },

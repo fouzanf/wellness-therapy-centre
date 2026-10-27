@@ -34,7 +34,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
-              Led by <strong className="text-[#1c1b18] dark:text-white font-semibold">Dr. M. Shasath Begum, M.D(Acu.)</strong>.
+              Led by <strong className="text-[#1c1b18] dark:text-white font-semibold">Dr. M. Shasath Begum, M.D(Acu.), PhD</strong>.
               Dedicated to compassionate, chemical-free healing through clinical Acupuncture,
               Acupressure, Cupping, and authentic Hijama (@ Sunnah Point) in J.P. Nagar, Bangalore.
             </p>
@@ -140,7 +140,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/about" className="hover:text-[#1b3b2b] dark:hover:text-[#34d399] transition-colors">
-                  Dr. Begum, M.D(Acu.)
+                  Dr. Begum, M.D(Acu.), PhD
                 </Link>
               </li>
               <li>
@@ -154,7 +154,7 @@ export default function Footer() {
           {/* Col 4: Address & Contact */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="font-editorial text-xs font-semibold uppercase tracking-wider text-[#1c1b18] dark:text-[#f3d987]">
-              Sanctuary Concierge
+              Sanctuary Desk
             </h4>
             <div className="space-y-2.5 text-xs text-neutral-700 dark:text-neutral-300">
               <div className="flex items-start gap-2">
@@ -189,7 +189,7 @@ export default function Footer() {
                 className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold bg-[#1b3b2b] hover:bg-[#234b37] text-[#fbf9f5] border border-[#d4af37]/40 flex items-center justify-center gap-2 shadow-md shadow-[#1b3b2b]/15 transition active:scale-95"
               >
                 <MessageSquare className="w-3.5 h-3.5 text-[#d4af37]" />
-                <span>Book Slot on WhatsApp</span>
+                <span>Book Appointment</span>
               </button>
             </div>
           </div>
@@ -199,7 +199,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-[#1b3b2b]/10 dark:border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-neutral-500 dark:text-neutral-500 text-center md:text-left">
           <p>
             © 2026 Wellness Therapy Centre. Led by Dr. M. Shasath Begum,
-            M.D(Acu.). All Rights Reserved.
+            M.D(Acu.), PhD. All Rights Reserved.
           </p>
 
           <p className="max-w-xl text-[10px] text-neutral-500 dark:text-neutral-500">

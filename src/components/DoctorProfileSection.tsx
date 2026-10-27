@@ -41,7 +41,7 @@ export default function DoctorProfileSection() {
               <div className="relative aspect-[4/5] w-full">
                 <Image
                   src="/images/doctor-photos.jpg"
-                  alt="Dr. M. Shasath Begum, M.D(Acu.) - Senior Holistic Physician at Wellness Therapy Centre Bangalore"
+                  alt="Dr. M. Shasath Begum, M.D(Acu.), PhD - Senior Holistic Physician at Wellness Therapy Centre Bangalore"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                   className="object-cover object-top hover:scale-105 transition-transform duration-700"
@@ -84,7 +84,7 @@ export default function DoctorProfileSection() {
             <div>
               <h2 className="font-editorial text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#1c1b18] dark:text-[#fbf9f5] tracking-tight leading-tight">
                 Dr. M. Shasath Begum,{" "}
-                <span className="font-editorial-italic sage-glow-text">M.D(Acu.)</span>
+                <span className="font-editorial-italic sage-glow-text">M.D(Acu.), PhD</span>
               </h2>
               <p className="text-sm font-semibold text-[#855f10] dark:text-[#f3d987] mt-1 tracking-wide">
                 Founder & Chief Holistic Consultant • Wellness Therapy Centre Bangalore
@@ -92,7 +92,7 @@ export default function DoctorProfileSection() {
             </div>
 
             <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed font-normal">
-              With over 15 years of dedicated clinical practice, Dr. M. Shasath Begum is one
+              With over 15 years of dedicated clinical practice, Dr. M. Shasath Begum, PhD is one
               of Bangalore’s foremost authorities in clinical acupuncture, precision acupressure,
               and authentic Hijama (@ Sunnah Point). Her healing philosophy integrates classical
               meridian diagnosis with deep physiological empathy to cure the root origin of chronic
@@ -149,7 +149,7 @@ export default function DoctorProfileSection() {
                 className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-semibold text-xs bg-[#1b3b2b] hover:bg-[#142e21] dark:bg-[#1f3f2f] text-[#fbf9f5] border border-[#d4af37]/45 shadow-lg shadow-[#1b3b2b]/15 flex items-center justify-center gap-2 transition active:scale-95"
               >
                 <MessageSquare className="w-4 h-4 fill-current text-[#d4af37]" />
-                <span>Book Concierge Consultation</span>
+                <span>Book Appointment</span>
               </button>
 
               <a
@@ -177,7 +177,7 @@ export default function DoctorProfileSection() {
               <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-[#d4af37]/30 shadow-md group">
                 <Image
                   src="/images/doctor-certificates.jpg"
-                  alt="Official Degrees and Certifications Board of Dr. M. Shasath Begum, M.D(Acu.)"
+                  alt="Official Degrees and Certifications Board of Dr. M. Shasath Begum, M.D(Acu.), PhD"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -200,7 +200,7 @@ export default function DoctorProfileSection() {
               </div>
 
               <h3 className="font-editorial text-xl sm:text-2xl font-semibold text-[#1c1b18] dark:text-white tracking-tight">
-                Official Clinical Accreditations of <span className="font-editorial-italic sage-glow-text">Dr. M. Shasath Begum</span>
+                Official Clinical Accreditations of <span className="font-editorial-italic sage-glow-text">Dr. M. Shasath Begum, PhD</span>
               </h3>
 
               <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed">

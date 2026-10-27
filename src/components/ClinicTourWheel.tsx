@@ -40,7 +40,7 @@ const CLINIC_ROOMS: ClinicRoom[] = [
     image: "/images/doctor-photos.jpg",
     fallbackImage: "/images/dr-shasath-begum.jpg",
     description:
-      "Private, sound-insulated consultation desk where Dr. M. Shasath Begum conducts comprehensive pulse assessments, meridian palpation, and detailed medical history evaluations.",
+      "Private, sound-insulated consultation desk where Dr. M. Shasath Begum, PhD conducts comprehensive pulse assessments, meridian palpation, and detailed medical history evaluations.",
     features: [
       "Confidential 1-on-1 private doctor consultation",
       "Traditional meridian diagnostic point evaluation",
@@ -108,7 +108,7 @@ const CLINIC_ROOMS: ClinicRoom[] = [
     image: "/images/doctor-certificates.jpg",
     fallbackImage: "/images/Doctor certificates.jpg",
     description:
-      "Displaying Dr. M. Shasath Begum's official M.D. in Acupuncture, Medicina Alternativa, and Sujok clinical certifications recognized across 15+ years of verified medical practice.",
+      "Displaying Dr. M. Shasath Begum, PhD's official M.D. in Acupuncture, Medicina Alternativa, and Sujok clinical certifications recognized across 15+ years of verified medical practice.",
     features: [
       "M.D. in Clinical Acupuncture & Acupressure licensures",
       "Certified Hijama Cupping practitioner accreditations",

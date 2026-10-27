@@ -38,7 +38,7 @@ export default function Navbar() {
           : "bg-[#fbf9f5]/85 dark:bg-[#121110]/90 backdrop-blur-md border-b border-[#d4af37]/15 dark:border-white/[0.04] py-3 md:py-4"
       }`}
     >
-      <div className="flex items-center justify-between w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
+      <div className="flex items-center justify-between w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 1. LOGO / BRANDING AREA (Left) */}
         <Link href="/" className="group flex items-center gap-3 shrink-0">
           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#1b3b2b] to-[#2d5a42] p-0.5 shadow-md shadow-[#1b3b2b]/15 group-hover:scale-105 transition-transform shrink-0">

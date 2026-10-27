@@ -30,23 +30,24 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Wellness Therapy Centre | Dr. M. Shasath Begum, M.D(Acu.) Bangalore",
+  title: "Wellness Therapy Centre | Dr. M. Shasath Begum, M.D(Acu.), PhD Bangalore",
   description:
-    "Multi-million dollar medical wellness sanctuary in J.P. Nagar, Bangalore led by Dr. M. Shasath Begum, M.D(Acu.). Clinical Acupressure, Acupuncture, Cupping, and Hijama (@ Sunnah Point) for lasting chronic pain relief, PCOD care, and total vitality.",
+    "Multi-million dollar medical wellness sanctuary in J.P. Nagar, Bangalore led by Dr. M. Shasath Begum, M.D(Acu.), PhD. Clinical Acupressure, Acupuncture, Cupping, and Hijama (@ Sunnah Point) for lasting chronic pain relief, PCOD care, and total vitality.",
   keywords: [
     "Acupuncture Bangalore",
     "Hijama Bangalore",
     "Sunnah Point Hijama",
     "Dr. M. Shasath Begum",
+    "Dr. M. Shasath Begum, PhD",
     "Wellness Therapy Centre J.P. Nagar",
     "Cupping Therapy Bangalore",
     "Sciatica Pain Relief Bangalore",
     "Acupressure Bangalore",
     "PCOD Acupuncture Bangalore",
   ],
-  authors: [{ name: "Dr. M. Shasath Begum, M.D(Acu.)" }],
+  authors: [{ name: "Dr. M. Shasath Begum, M.D(Acu.), PhD" }],
   openGraph: {
-    title: "Wellness Therapy Centre | Dr. M. Shasath Begum, M.D(Acu.)",
+    title: "Wellness Therapy Centre | Dr. M. Shasath Begum, M.D(Acu.), PhD",
     description:
       "Premier holistic healing sanctuary in J.P. Nagar, Bangalore. Clinical Acupuncture, Acupressure, Cupping, and authentic Hijama (@ Sunnah Point).",
     url: "https://wellnesstherapycentre.com",
@@ -118,9 +119,9 @@ export default function RootLayout({
       {
         "@type": "Physician",
         "@id": "https://wellnesstherapycentre.com/#physician",
-        name: "Dr. M. Shasath Begum",
+        name: "Dr. M. Shasath Begum, PhD",
         honorificPrefix: "Dr.",
-        honorificSuffix: "M.D(Acu.)",
+        honorificSuffix: "M.D(Acu.), PhD",
         jobTitle: "Senior Holistic Physician & Acupuncturist",
         worksFor: {
           "@id": "https://wellnesstherapycentre.com/#clinic",

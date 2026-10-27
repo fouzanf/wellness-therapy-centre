@@ -35,7 +35,7 @@ export default function ContactPage() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f4efe4] dark:bg-[#1c1a17] border border-[#d4af37]/35 dark:border-[#d4af37]/25 text-[#1b3b2b] dark:text-[#f3d987] text-xs font-semibold mb-3 shadow-sm">
             <Compass className="w-4 h-4 text-[#d4af37]" />
-            <span>Clinic Location & Appointment Concierge Desk</span>
+            <span>Clinic Location & Appointment Desk</span>
           </div>
           <h1 className="font-editorial text-3xl sm:text-5xl font-semibold text-[#1c1b18] dark:text-[#fbf9f5] tracking-tight">
             Visit Us in <span className="font-editorial-italic sage-glow-text">J.P. Nagar, Bangalore</span>
@@ -105,7 +105,7 @@ export default function ContactPage() {
                       +91 9740495548
                     </a>
                     <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">
-                      Fast booking confirmations via Concierge WhatsApp
+                      Fast booking confirmations via WhatsApp
                     </p>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ export default function ContactPage() {
                   className="w-full py-3 rounded-xl text-xs font-semibold bg-[#1b3b2b] hover:bg-[#234b37] text-[#fbf9f5] border border-[#d4af37]/40 shadow-md shadow-[#1b3b2b]/15 flex items-center justify-center gap-2 transition active:scale-95"
                 >
                   <MessageSquare className="w-4 h-4 text-[#d4af37]" />
-                  <span>Book Slot via Concierge Desk</span>
+                  <span>Book Appointment</span>
                 </button>
               </div>
             </div>
@@ -181,7 +181,7 @@ export default function ContactPage() {
 
                 <div className="p-4 rounded-2xl bg-[#f4efe4] dark:bg-[#1c1a17] border border-[#d4af37]/30 text-neutral-800 dark:text-[#f3d987]">
                   <strong className="text-[#1c1b18] dark:text-white block mb-1 font-semibold">Doctor Availability:</strong>
-                  Dr. M. Shasath Begum personally examines every patient. Please arrive 10 minutes prior
+                  Dr. M. Shasath Begum, M.D(Acu.), PhD personally examines every patient. Please arrive 10 minutes prior
                   to your confirmed WhatsApp slot.
                 </div>
               </div>

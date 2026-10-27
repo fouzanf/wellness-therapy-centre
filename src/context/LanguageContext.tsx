@@ -47,7 +47,7 @@ export interface Translations {
 export const TRANSLATIONS: Record<Language, Translations> = {
   en: {
     clinicName: "WELLNESS THERAPY CENTRE",
-    doctorName: "Dr. M. Shasath Begum, M.D(Acu.)",
+    doctorName: "Dr. M. Shasath Begum, M.D(Acu.), PhD",
     doctorTitle: "Holistic Physician & Acupuncturist",
     locationTag: "J.P. Nagar, Bangalore",
     nav: {
@@ -60,7 +60,7 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       bookAppointment: "Book Appointment",
     },
     ticker: {
-      online: "Dr. M. Shasath Begum is In-Clinic Today",
+      online: "Dr. M. Shasath Begum, PhD is In-Clinic Today",
       hours: "Consulting 9:00 AM – 8:00 PM (All 7 Days)",
       cta: "Instant WhatsApp Confirmation",
     },
@@ -70,24 +70,24 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       titleStart: "Restore Vitality & Relieve Chronic Pain With ",
       titleHighlight: "Natural Meridian Therapy",
       subtitle:
-        "Led by esteemed practitioner Dr. M. Shasath Begum, M.D(Acu.). Combining clinical Acupuncture, Acupressure, Cupping, and Hijama (@ Sunnah Point) for lasting healing without recurring pills.",
-      ctaWhatsApp: "Book Appointment via WhatsApp",
+        "Led by esteemed practitioner Dr. M. Shasath Begum, M.D(Acu.), PhD. Combining clinical Acupuncture, Acupressure, Cupping, and Hijama (@ Sunnah Point) for lasting healing without recurring pills.",
+      ctaWhatsApp: "Book Appointment",
       ctaCall: "Call +91 9740495548",
       statYears: "Years Clinical Care",
       statPatients: "Healing Sessions",
       statSterile: "Sterile Disposable Cups",
     },
     booking: {
-      modalTitle: "Book with Dr. M. Shasath Begum",
+      modalTitle: "Book with Dr. M. Shasath Begum, PhD",
       step1: "Select Therapy Service",
       step2: "Date & Preferred Time",
       step3: "Patient Details & WhatsApp Dispatch",
-      submit: "Book via WhatsApp",
+      submit: "Book Appointment",
     },
   },
   kn: {
     clinicName: "ವೆಲ್ನೆಸ್ ಥೆರಪಿ ಸೆಂಟರ್",
-    doctorName: "ಡಾ. ಎಂ. ಶಾಸತ್ ಬೇಗಂ, M.D(Acu.)",
+    doctorName: "ಡಾ. ಎಂ. ಶಾಸತ್ ಬೇಗಂ, M.D(Acu.), PhD",
     doctorTitle: "ಹೋಲಿಸ್ಟಿಕ್ ವೈದ್ಯೆ ಮತ್ತು ಆಕ್ಯುಪಂಕ್ಚರ್ ತಜ್ಞೆ",
     locationTag: "ಜೆ.ಪಿ. ನಗರ, ಬೆಂಗಳೂರು",
     nav: {
@@ -100,7 +100,7 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       bookAppointment: "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್",
     },
     ticker: {
-      online: "ಡಾ. ಶಾಸತ್ ಬೇಗಂ ಇಂದು ಕ್ಲಿನಿಕ್‌ನಲ್ಲಿದ್ದಾರೆ",
+      online: "ಡಾ. ಶಾಸತ್ ಬೇಗಂ, PhD ಇಂದು ಕ್ಲಿನಿಕ್‌ನಲ್ಲಿದ್ದಾರೆ",
       hours: "ಸಮಾಲೋಚನೆ: ಬೆಳಿಗ್ಗೆ 9:00 - ರಾತ್ರಿ 8:00 (ವಾರದ ಎಲ್ಲಾ ದಿನಗಳು)",
       cta: "ವಾಟ್ಸಾಪ್ ಮೂಲಕ ತ್ವರಿತ ದೃಢೀಕರಣ",
     },
@@ -110,19 +110,19 @@ export const TRANSLATIONS: Record<Language, Translations> = {
       titleStart: "ಔಷಧಿಗಳಿಲ್ಲದೆ ದೀರ್ಘಕಾಲದ ನೋವಿನಿಂದ ಮುಕ್ತಿ ಪಡೆಯಿರಿ: ",
       titleHighlight: "ನೈಸರ್ಗಿಕ ಮೆರಿಡಿಯನ್ ಚಿಕಿತ್ಸೆ",
       subtitle:
-        "ಪ್ರಸಿದ್ಧ ವೈದ್ಯೆ ಡಾ. ಎಂ. ಶಾಸತ್ ಬೇಗಂ, M.D(Acu.) ಅವರ ಮಾರ್ಗದರ್ಶನದಲ್ಲಿ. ಆಕ್ಯುಪಂಕ್ಚರ್, ಆಕ್ಯುಪ್ರೆಶರ್, ಕಪ್ಪಿಂಗ್ ಮತ್ತು ಪವಿತ್ರ ಸುನ್ನತ್ ಪಾಯಿಂಟ್ ಹಿಜಾಮಾ ಮೂಲಕ ಶಾಶ್ವತ ಪರಿಹಾರ.",
-      ctaWhatsApp: "ವಾಟ್ಸಾಪ್‌ನಲ್ಲಿ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಕಾಯ್ದಿರಿಸಿ",
+        "ಪ್ರಸಿದ್ಧ ವೈದ್ಯೆ ಡಾ. ಎಂ. ಶಾಸತ್ ಬೇಗಂ, M.D(Acu.), PhD ಅವರ ಮಾರ್ಗದರ್ಶನದಲ್ಲಿ. ಆಕ್ಯುಪಂಕ್ಚರ್, ಆಕ್ಯುಪ್ರೆಶರ್, ಕಪ್ಪಿಂಗ್ ಮತ್ತು ಪವಿತ್ರ ಸುನ್ನತ್ ಪಾಯಿಂಟ್ ಹಿಜಾಮಾ ಮೂಲಕ ಶಾಶ್ವತ ಪರಿಹಾರ.",
+      ctaWhatsApp: "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಕಾಯ್ದಿರಿಸಿ",
       ctaCall: "ಕರೆ ಮಾಡಿ: +91 9740495548",
       statYears: "ವರ್ಷಗಳ ಅನುಭವ",
       statPatients: "ಯಶಸ್ವಿ ಚಿಕಿತ್ಸೆಗಳು",
       statSterile: "ಏಕ-ಬಳಕೆಯ ಸುರಕ್ಷಿತ ಕಪ್‌ಗಳು",
     },
     booking: {
-      modalTitle: "ಡಾ. ಶಾಸತ್ ಬೇಗಂ ಅವರೊಂದಿಗೆ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್",
+      modalTitle: "ಡಾ. ಶಾಸತ್ ಬೇಗಂ, PhD ಅವರೊಂದಿಗೆ ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್",
       step1: "ಚಿಕಿತ್ಸೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
       step2: "ದಿನಾಂಕ ಮತ್ತು ಸಮಯ",
       step3: "ರೋಗಿಯ ಮಾಹಿತಿ & ವಾಟ್ಸಾಪ್ ಕಳುಹಿಸಿ",
-      submit: "ವಾಟ್ಸಾಪ್ ಮೂಲಕ ದೃಢೀಕರಿಸಿ",
+      submit: "ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ಕಾಯ್ದಿರಿಸಿ",
     },
   },
 };

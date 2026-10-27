@@ -34,7 +34,7 @@ export default function AboutPage() {
             <span>Practitioner Profile & Clinical Leadership</span>
           </div>
           <h1 className="font-editorial text-3xl sm:text-5xl font-semibold text-[#1c1b18] dark:text-[#fbf9f5] tracking-tight">
-            Meet <span className="font-editorial-italic sage-glow-text">Dr. M. Shasath Begum</span>, M.D(Acu.)
+            Meet <span className="font-editorial-italic sage-glow-text">Dr. M. Shasath Begum</span>, M.D(Acu.), PhD
           </h1>
           <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mt-4 leading-relaxed font-light">
             Senior Acupuncturist, Acupressure Master, and Certified Hijama Specialist serving South
@@ -50,14 +50,14 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5] w-full">
                 <Image
                   src="/images/doctor-photos.jpg"
-                  alt="Dr. M. Shasath Begum, M.D(Acu.) consulting at Wellness Therapy Centre J.P. Nagar Bangalore"
+                  alt="Dr. M. Shasath Begum, M.D(Acu.), PhD consulting at Wellness Therapy Centre J.P. Nagar Bangalore"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 glass-panel p-3.5 rounded-2xl border border-white/[0.15] dark:border-white/[0.1] text-xs">
-                  <div className="font-editorial text-base font-semibold text-white">Dr. M. Shasath Begum, M.D(Acu.)</div>
+                  <div className="font-editorial text-base font-semibold text-white">Dr. M. Shasath Begum, M.D(Acu.), PhD</div>
                   <div className="text-[#f3d987] text-[11px] font-semibold mt-0.5">
                     Chief Physician • Wellness Therapy Centre Bangalore
                   </div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed font-light">
-              Dr. M. Shasath Begum graduated with an M.D. in Acupuncture, mastering the intricate
+              Dr. M. Shasath Begum, PhD graduated with an M.D. in Acupuncture, mastering the intricate
               energy meridian grids, pulse diagnostic techniques, and bio-electric pathways of the
               human body. Over her fifteen years of dedicated service in Bangalore, she has healed
               patients suffering from severe chronic debilitating conditions who had exhausted
@@ -187,7 +187,7 @@ export default function AboutPage() {
                 Official Clinical Accreditations & Licensures
               </h3>
               <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed font-light">
-                Every therapy session at Wellness Therapy Centre is backed by Dr. M. Shasath Begum&apos;s
+                Every therapy session at Wellness Therapy Centre is backed by Dr. M. Shasath Begum, PhD&apos;s
                 rigorous medical degrees in Complementary Medicine, Sujok Acupressure, and clinical
                 Panchakarma techniques.
               </p>

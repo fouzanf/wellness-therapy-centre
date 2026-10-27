@@ -201,7 +201,7 @@ export default function WhatsAppBookingModal() {
 
     // Structured Message Template exactly as required
     const messageTemplate = `Hi Wellness Therapy Centre! 🖐️
-I would like to book an appointment with Dr. M. Shasath Begum.
+I would like to book an appointment with Dr. M. Shasath Begum, M.D(Acu.), PhD.
 
 📋 Details:
 - Name: ${userName.trim()}
@@ -236,7 +236,7 @@ Please confirm my appointment slot. Thanks!`;
       handleClose();
       showToast(
         "WhatsApp Redirect Initiated!",
-        "Dr. M. Shasath Begum's clinic desk will confirm your appointment slot shortly on WhatsApp."
+        "Dr. M. Shasath Begum, PhD's clinic desk will confirm your appointment slot shortly on WhatsApp."
       );
     }, 400);
   };
@@ -259,7 +259,7 @@ Please confirm my appointment slot. Thanks!`;
           className="fixed inset-0 bg-[#121110]/80 backdrop-blur-md"
         />
 
-        {/* Modal Window: Concierge Medical Sanctuary Desk */}
+        {/* Modal Window: Medical Sanctuary Desk */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -276,14 +276,14 @@ Please confirm my appointment slot. Thanks!`;
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-ping" />
                   <span className="text-[11px] font-bold tracking-widest text-[#855f10] dark:text-[#f3d987] uppercase">
-                    Private Medical Concierge Desk
+                    Private Medical Sanctuary Desk
                   </span>
                 </div>
                 <h2 className="font-editorial text-xl sm:text-2xl font-semibold text-[#1c1b18] dark:text-[#fbf9f5] mt-1">
-                  Consultation with Dr. M. Shasath Begum
+                  Consultation with Dr. M. Shasath Begum, PhD
                 </h2>
                 <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-0.5">
-                  Senior Holistic Physician • M.D(Acu.) • Priority WhatsApp Dispatch
+                  Senior Holistic Physician • M.D(Acu.), PhD • Priority WhatsApp Dispatch
                 </p>
               </div>
 
@@ -365,7 +365,7 @@ Please confirm my appointment slot. Thanks!`;
 
           {/* Modal Body */}
           <div 
-            className="flex-1 overflow-y-auto overscroll-contain p-5 sm:p-7 pb-32 sm:pb-8 max-h-[62vh] sm:max-h-[68vh] space-y-4"
+            className="flex-1 overflow-y-auto overscroll-contain p-5 sm:p-7 pb-32 max-h-[62vh] sm:max-h-[68vh] space-y-4"
             onWheel={(e) => {
               e.stopPropagation();
             }}
@@ -645,18 +645,18 @@ Please confirm my appointment slot. Thanks!`;
                 <div className="p-3.5 bg-[#f5f1e8] dark:bg-[#1a1917] border border-[#d4af37]/25 rounded-2xl text-[11px] text-neutral-600 dark:text-neutral-400 space-y-1 shadow-sm">
                   <div className="text-[#1c1b18] dark:text-neutral-200 font-semibold flex items-center gap-1.5">
                     <ShieldCheck className="w-3.5 h-3.5 text-[#1b3b2b] dark:text-[#34d399]" />
-                    Concierge Itinerary Summary:
+                    Appointment Itinerary Summary:
                   </div>
                   <div>• Modality: <span className="text-[#1c1b18] dark:text-white font-medium">{selectedService}</span></div>
                   <div>• Slot: <span className="text-[#1c1b18] dark:text-white font-medium">{selectedDate} ({selectedTime})</span></div>
-                  <div>• Physician: <span className="text-[#1b3b2b] dark:text-[#34d399] font-medium">Dr. M. Shasath Begum, M.D(Acu.)</span></div>
+                  <div>• Physician: <span className="text-[#1b3b2b] dark:text-[#34d399] font-medium">Dr. M. Shasath Begum, M.D(Acu.), PhD</span></div>
                 </div>
               </motion.form>
             )}
           </div>
 
           {/* Footer Controls */}
-          <div className="px-5 sm:px-7 py-4 bg-[#f5f1e8] dark:bg-[#141311] border-t border-[#d4af37]/25 flex items-center justify-between shrink-0 z-10">
+          <div className="px-5 sm:px-7 pt-4 pb-6 sm:pb-8 pb-[calc(env(safe-area-inset-bottom)+1.5rem)] bg-[#f5f1e8] dark:bg-[#141311] border-t border-[#d4af37]/25 flex items-center justify-between shrink-0 z-10">
             {currentStep > 1 ? (
               <button
                 type="button"
@@ -690,7 +690,7 @@ Please confirm my appointment slot. Thanks!`;
                 className="flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold bg-[#1b3b2b] hover:bg-[#142e21] dark:bg-[#204031] text-[#fbf9f5] border border-[#d4af37]/50 shadow-xl shadow-[#1b3b2b]/20 transition-all transform active:scale-95 disabled:opacity-50"
               >
                 <MessageSquare className="w-4 h-4 fill-current text-[#d4af37]" />
-                <span>{isSubmitting ? "Connecting..." : "Confirm Concierge Booking on WhatsApp"}</span>
+                <span>{isSubmitting ? "Connecting..." : "Book Appointment"}</span>
               </button>
             )}
           </div>
